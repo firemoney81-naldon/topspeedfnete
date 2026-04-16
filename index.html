@@ -1,23 +1,428 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+    <style>
+        /* 기본 레이아웃 및 폰트 설정 */
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f7f9fc; color: #333; margin: 0; padding: 0; line-height: 1.6; }
+        .wrapper { max-width: 900px; margin: 30px auto; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); }
+        h1 { font-size: 2.5em; color: #004d40; margin-bottom: 0.5em; border-bottom: 3px solid #e0f2f1; padding-bottom: 10px; text-align: center; font-weight: 700; }
+        h2 { font-size: 2em; color: #00796b; margin-top: 1.8em; margin-bottom: 0.8em; border-left: 5px solid #00796b; padding-left: 10px; font-weight: 600; }
+        h3 { font-size: 1.5em; color: #004d40; margin-top: 1.5em; margin-bottom: 0.6em; font-weight: 500; }
+        p { margin-bottom: 1.2em; text-align: justify; }
+        ul, ol { margin-bottom: 1.2em; padding-left: 20px; }
+        li { margin-bottom: 0.5em; }
+
+        /* 하이라이트 및 강조 요소 */
+        .highlight { color: #d32f2f; font-weight: bold; }
+        .info-box { background-color: #e0f2f1; border-radius: 8px; padding: 20px; margin: 2em 0; border: 1px solid #b2dfdb; }
+        .info-box p { color: #004d40; font-weight: 500; margin-bottom: 0.5em; }
+
+        /* 표 스타일 */
+        .comparison-table { width: 100%; border-collapse: collapse; margin-top: 1.5em; }
+        .comparison-table th, .comparison-table td { border: 1px solid #ddd; padding: 12px; text-align: center; font-size: 0.95em; }
+        .comparison-table th { background-color: #f1f8e9; color: #2e7d32; font-weight: 600; }
+        .comparison-table td { background-color: #ffffff; }
+
+        /* 입력 폼 스타일 (계산기) */
+        .input-form { background-color: #e8f5e9; padding: 25px; border-radius: 10px; box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); }
+        .input-form label { display: block; margin-bottom: 8px; font-weight: 600; color: #2e7d32; }
+        .input-form input, .input-form select { width: calc(100% - 24px); padding: 12px; margin-bottom: 15px; border: 1px solid #c8e6c9; border-radius: 6px; box-sizing: border-box; }
+        .input-form button { padding: 12px 20px; background-color: #388e3c; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 1em; width: 100%; transition: background-color 0.3s; }
+        .input-form button:hover { background-color: #2e7d32; }
+        #calcResult { font-size: 1.3em; color: #d32f2f; margin-top: 15px; text-align: center; font-weight: 700; background-color: #fff; padding: 10px; border-radius: 6px; }
+
+        /* FAQ 스타일 */
+        .faq { margin-top: 2em; }
+        .faq-item { margin-bottom: 1em; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .faq-item h3 { cursor: pointer; color: #00796b; background-color: #f9f9f9; padding: 10px; border-radius: 5px; margin-bottom: 0; }
+        .faq-item p { display: none; margin-top: 10px; padding: 10px; background-color: #fafafa; border-radius: 5px; border-left: 3px solid #004d40; }
+
+        /* 기타 스타일 */
+        .image-container { text-align: center; margin: 2em 0; }
+        .image-container img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); }
+        .external-links { margin-top: 2em; padding: 20px; background-color: #f1f8e9; border-radius: 10px; }
+        .external-links a { color: #004d40; text-decoration: none; font-weight: 500; }
+        .external-links a:hover { text-decoration: underline; }
+    </style>
+
+    <!-- Pexels 이미지 출처 정보 -->
+    <!-- 이미지 출처: Pexels.com, 키워드: network cable -->
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.example.com/wired-internet-guide"
+      },
+      "headline": "2026년 유선 인터넷 가입 완벽 가이드: SKT, KT, LGU+ 혜택 비교 및 현금 지원금 분석",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://images.pexels.com/photos/1036840/pexels-photo-1036840.jpeg",
+        "width": 1200,
+        "height": 800
+      },
+      "datePublished": "2026-04-16",
+      "dateModified": "2026-04-16",
+      "author": {
+        "@type": "Organization",
+        "name": "인터넷 가입 전문가 그룹"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "인터넷 가이드",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.example.com/logo.png"
+        }
+      },
+      "description": "2026년 최신 유선 인터넷 가입 정보를 찾고 계신가요? SKT, KT, LGU+ 통신사별 요금제, 속도(100M, 500M, 1G), 현금 지원금, 사은품 혜택을 비교 분석하고, 초고속 인터넷 설치 시 알아야 할 모든 것을 상세하게 정리했습니다. 네이버 웹사이트 영역 상위 노출을 위한 핵심 정보와 지역별 최적의 선택 가이드까지 제공합니다."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "유선 인터넷 가입 시 현금 지원금은 얼마나 받을 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "현금 지원금은 통신사, 요금제, 가입 경로(본사 vs 대리점), 그리고 시기에 따라 달라집니다. 일반적으로 법정 최고 사은품 한도(경품고시제) 내에서 현금 지원이 이루어지며, 통신사 본사보다 온라인 전문 업체를 통해 가입할 경우 더 많은 현금 지원금을 받을 수 있습니다. 2026년 기준 3년 약정 시 최대 46만원 수준의 현금 지원이 가능합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "우리 집에는 어떤 속도(100M, 500M, 1G)가 적절한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "100Mbps는 웹서핑이나 일반적인 유튜브 시청 등 기본적인 용도에 적합합니다. 500Mbps는 4K 스트리밍, 온라인 게임, 여러 명이 동시에 인터넷을 사용하는 가정에 추천됩니다. 1Gbps는 고화질 영상 제작, 대용량 파일 다운로드, 라이브 스트리밍, AI 학습 등 전문적인 용도에 필요합니다. 사용 환경과 예산을 고려하여 선택하는 것이 중요합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "유선 인터넷 가입 시 '결합 할인'이 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "결합 할인은 인터넷과 동일한 통신사의 휴대폰을 함께 사용할 경우 요금 할인을 받는 제도입니다. SKT, KT, LGU+ 모두 '가족 결합 할인'을 제공하며, 결합 인원수와 요금제에 따라 할인 폭이 달라집니다. 결합 할인을 통해 월 청구 금액을 크게 절감할 수 있으므로, 기존 휴대폰 통신사를 확인하고 가입하는 것이 유리합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "인터넷 설치 시 발생하는 설치비용과 추가 비용은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "기본적으로 가입 시 '설치비'가 청구됩니다. 2026년 기준으로 100Mbps 기준 약 22,000원, 500Mbps/1Gbps 기준 약 33,000원 수준이며 통신사별 차이가 있습니다. 3년 약정 시 면제되는 경우가 많으나, 약정 기간 내 해지 시 위약금과 함께 설치비가 청구될 수 있습니다. 또한, 공유기(Wi-Fi) 임대료나 IPTV 셋톱박스 임대료가 월별 요금에 추가될 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "유선 인터넷 품질에 지역별 차이가 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 지역별로 인터넷 품질에 차이가 있을 수 있습니다. 특히 SKT, KT, LGU+ 중 KT는 가장 넓은 커버리지를 가지고 있어 지방이나 도서 산간 지역에서도 안정적인 서비스를 제공하는 경우가 많습니다. 반면 SKT와 LGU+는 대도시(서울, 부산, 인천, 대구 등)와 아파트 단지에 강점을 보입니다. 거주 지역의 인터넷 인프라를 확인하고 가입하는 것이 중요합니다."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>유선 인터넷 가입 2026년 완벽 가이드: SKT, KT, LGU+ 비교 분석</h1>
+            <p>2026년 새롭게 이사하거나 인터넷을 교체하려는 분들을 위해, 복잡한 유선 인터넷 가입 절차와 <span class="highlight">현금 지원금, 요금제 선택, 통신사별 장단점</span>을 상세히 분석했습니다. 초고속 인터넷 시대에 현명하게 가입하는 방법을 지금부터 알아보겠습니다.</p>
+        </header>
+
+        <!-- Pexels 이미지 삽입 (wired network cable) -->
+        <div class="image-container">
+            <img src="https://images.pexels.com/photos/1036840/pexels-photo-1036840.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="유선 인터넷 광케이블 이미지">
+            <p style="font-size: 0.8em; color: #666;">이미지 출처: Pexels.com - M.F.M. photo</p>
+        </div>
+
+        <!-- 비용 견적 계산기 -->
+        <div class="input-form">
+            <h2>인터넷 요금제 예상 견적 계산기 (2026년 기준)</h2>
+            <p>다음 조건을 입력하여 대략적인 월 요금 및 예상 현금 지원금을 확인해 보세요. 실제 견적은 가입 시점 및 결합 상품에 따라 달라질 수 있습니다.</p>
+            <label for="provider">희망 통신사 선택</label>
+            <select id="provider" name="provider" required>
+                <option value="kt">KT (케이티)</option>
+                <option value="skt">SKT (에스케이티)</option>
+                <option value="lgu">LGU+ (엘지유플러스)</option>
+                <option value="etc">기타/알뜰폰 결합</option>
+            </select>
+
+            <label for="speed">희망 인터넷 속도</label>
+            <select id="speed" name="speed" required>
+                <option value="100">100Mbps (광랜)</option>
+                <option value="500">500Mbps (기가 라이트)</option>
+                <option value="1000">1Gbps (기가 인터넷)</option>
+            </select>
+
+            <label for="contractTerm">약정 기간</label>
+            <select id="contractTerm" name="contractTerm" required>
+                <option value="36">3년 (36개월)</option>
+                <option value="24">2년 (24개월)</option>
+                <option value="12">1년 (12개월)</option>
+            </select>
+
+            <label for="bundle">결합 상품 유무 (TV, 휴대폰)</label>
+            <select id="bundle" name="bundle" required>
+                <option value="no">없음 (인터넷 단독 가입)</option>
+                <option value="light">약한 결합 (1인 가구 휴대폰 결합)</option>
+                <option value="strong">강한 결합 (가족 2인 이상 휴대폰 결합 + TV)</option>
+            </select>
+
+            <button type="button" onclick="calculateCost()">예상 견적 확인하기</button>
+            <p id="calcResult" style="font-size:1.2em; color:#d32f2f; margin-top:1em;"></p>
+        </div>
+
+        <!-- 통신사별 비교 테이블 -->
+        <h2>통신사별 유선 인터넷 요금제 및 사은품 혜택 비교 (2026년)</h2>
+        <p>SKT, KT, LGU+ 세 통신사의 주요 요금제별 평균 가격과 현금 지원 혜택을 비교한 표입니다. 이 표를 통해 가입 시 <span class="highlight">현금 지원금 금액</span>과 월 청구되는 <span class="highlight">예상 가격(견적)</span>을 한눈에 비교할 수 있습니다. <a href="#footnote-1" style="color: #00796b;">(*자세한 지역별 설치 가능 여부는 별도 확인 필요)</a></p>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>요금제</th>
+                    <th>월 요금 (3년 약정, 단독 기준)</th>
+                    <th>결합 할인 적용 시 예상 금액</th>
+                    <th>현금 지원금 평균 (업체별 변동)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>KT (케이티)</td>
+                    <td>100Mbps (인터넷 슬림)</td>
+                    <td>약 22,000원</td>
+                    <td>16,500원 ~ 19,800원</td>
+                    <td>15만원 ~ 20만원</td>
+                </tr>
+                <tr>
+                    <td>SKT (에스케이티)</td>
+                    <td>100Mbps (B tv Basic)</td>
+                    <td>약 22,000원</td>
+                    <td>16,500원 ~ 19,800원</td>
+                    <td>15만원 ~ 20만원</td>
+                </tr>
+                <tr>
+                    <td>LGU+ (엘지유플러스)</td>
+                    <td>100Mbps (인터넷 라이트)</td>
+                    <td>약 22,000원</td>
+                    <td>16,500원 ~ 19,800원</td>
+                    <td>15만원 ~ 20만원</td>
+                </tr>
+                <tr>
+                    <td>KT (케이티)</td>
+                    <td>500Mbps (기가 라이트)</td>
+                    <td>약 33,000원</td>
+                    <td>27,500원 ~ 29,700원</td>
+                    <td>35만원 ~ 40만원</td>
+                </tr>
+                <tr>
+                    <td>SKT (에스케이티)</td>
+                    <td>500Mbps (기가 라이트)</td>
+                    <td>약 33,000원</td>
+                    <td>27,500원 ~ 29,700원</td>
+                    <td>35만원 ~ 40만원</td>
+                </tr>
+                <tr>
+                    <td>LGU+ (엘지유플러스)</td>
+                    <td>500Mbps (기가 라이트)</td>
+                    <td>약 33,000원</td>
+                    <td>27,500원 ~ 29,700원</td>
+                    <td>35만원 ~ 40만원</td>
+                </tr>
+                <tr>
+                    <td>KT (케이티)</td>
+                    <td>1Gbps (기가 인터넷)</td>
+                    <td>약 38,500원</td>
+                    <td>33,000원 ~ 35,200원</td>
+                    <td>40만원 ~ 45만원</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="footnote" id="footnote-1" style="font-size: 0.85em; color: #666; margin-top: 10px;">*위 금액은 2026년 기준 통신사 공식 요금제와 결합 할인 예시를 바탕으로 한 평균값이며, 실제 현금 지원금은 업체별 프로모션과 가입 조건(TV 결합 여부 등)에 따라 상이할 수 있습니다. 정확한 견적은 전문 업체에 문의해야 합니다. 현금 지원금은 '경품고시제'에 따라 최대 한도가 정해져 있습니다.</p>
+
+        <!-- 핵심 요약: 통신사별 장단점 및 추천 대상 -->
+        <h2>통신사별 장단점 비교 및 나에게 맞는 통신사 추천 가이드</h2>
+        <div class="info-box">
+            <h3>1. KT (케이티)</h3>
+            <p><strong>장점:</strong> 가장 넓은 <span class="highlight">커버리지와 안정적인 품질</span>을 자랑합니다. 특히 지방, 외곽 지역, 오래된 건물에서도 설치 가능성이 높습니다. 전국 어디든 설치가 필요하다면 KT가 가장 무난한 선택입니다. <strong>단점:</strong> 다른 통신사 대비 현금 지원금이나 사은품 혜택이 상대적으로 적을 수 있습니다. <a href="https://www.google.com/search?q=KT+인터넷+후기">KT 내돈내산 후기</a>를 보면 품질 만족도가 높은 편입니다.</p>
+            <p><strong>추천 대상:</strong> 인터넷 품질이 가장 중요한 사용자, 지방 지역 거주자, KT 휴대폰 결합 사용자.</p>
+        </div>
+        <div class="info-box">
+            <h3>2. SKT (에스케이티)</h3>
+            <p><strong>장점:</strong> 휴대폰 가입자가 가장 많은 통신사입니다. 휴대폰 요금제와 결합 시 <span class="highlight">할인 폭이 가장 크다는 장점</span>이 있습니다. 특히 가족 구성원이 SKT 휴대폰을 사용하는 경우 '온가족 할인' 혜택을 통해 요금 절감이 용이합니다. <strong>단점:</strong> 수도권 대도시 아파트 단지에 강점을 보이지만, KT 대비 지방이나 외곽 지역 커버리지가 다소 약할 수 있습니다.</p>
+            <p><strong>추천 대상:</strong> 가족 구성원 모두 SKT 휴대폰 사용자, 대규모 아파트 단지 거주자.</p>
+        </div>
+        <div class="info-box">
+            <h3>3. LGU+ (엘지유플러스)</h3>
+            <p><strong>장점:</strong> <span class="highlight">현금 지원금 혜택이 가장 좋은 통신사</span> 중 하나로 알려져 있습니다. 신규 가입 시 파격적인 사은품이나 현금 지원을 제공하는 경우가 많아 <span class="highlight">저렴한곳</span>을 찾는 소비자에게 인기가 높습니다. IPTV 서비스의 만족도도 높습니다. <strong>단점:</strong> 일부 지역에서 속도 안정성 측면에서 KT 대비 미흡하다는 평이 있을 수 있습니다. <a href="https://www.google.com/search?q=LGU%2B+%EC%9D%B8%ED%84%B0%EB%84%B7+%EB%82%B4%EB%8F%88%EB%82%B4%EC%82%B0">LGU+ 내돈내산 후기</a> 검색 시 참고할 만합니다.</p>
+            <p><strong>추천 대상:</strong> 현금 지원금 혜택을 최우선으로 고려하는 사용자, IPTV 서비스 만족도를 중시하는 사용자.</p>
+        </div>
+
+        <!-- 속도별 선택 가이드: 100M vs 500M vs 1G -->
+        <h2>나에게 적합한 인터넷 속도 선택: 100Mbps vs 500Mbps vs 1Gbps</h2>
+        <p>인터넷 가입 시 가장 많이 고민하는 부분은 '속도'입니다. 단순히 100M가 저렴해서, 혹은 1G가 최고 속도라 무조건 좋다기보다는, 실제 사용 목적과 <span class="highlight">가정 내 기기 대수, 사용 환경</span>에 맞춰 선택하는 것이 중요합니다. 특히 2026년에는 <span class="highlight">ChatGPT, Gemini, AI</span> 등의 AI 서비스 활용이 늘어나면서 안정적인 초고속 인터넷 환경이 더욱 중요해지고 있습니다. 다음은 속도별 권장 사용 시나리오입니다.</p>
+        <div class="info-box">
+            <h3>100Mbps (광랜) 추천</h3>
+            <p><strong>사용 환경:</strong> 1인 가구, 웹서핑, 이메일, HD급 동영상 스트리밍, 유튜브 시청. <a href="https://www.google.com/search?q=%EC%9D%B8%ED%84%B0%EB%84%B7+100M+%ED%9B%84%EA%B8%B0">100M 인터넷 후기</a>를 보면 일반적인 사용에 큰 불편함은 없습니다.</p>
+            <p><strong>핵심:</strong> 기본적인 용도라면 충분히 저렴하게 이용 가능. 월 비용이 가장 <span class="highlight">저렴한곳</span>을 찾는 소비자에게 적합.</p>
+        </div>
+        <div class="info-box">
+            <h3>500Mbps (기가 라이트) 추천</h3>
+            <p><strong>사용 환경:</strong> 2~3인 가구, 4K UHD 스트리밍(넷플릭스, 디즈니플러스), 고화질 온라인 게임, 라이브 스트리밍 시청. <span class="highlight">ChatGPT나 Gemini</span> 등 AI 서비스 사용 시에도 원활한 속도를 보장합니다. 최근 <span class="highlight">평균</span>적으로 가장 많이 선택하는 요금제입니다.</p>
+            <p><strong>핵심:</strong> 가격과 속도의 균형이 가장 좋음. 다수의 기기가 동시에 접속해도 끊김 없는 환경 제공.</p>
+        </div>
+        <div class="info-box">
+            <h3>1Gbps (기가 인터넷) 추천</h3>
+            <p><strong>사용 환경:</strong> 4인 이상 다인 가구, 대용량 파일(4K/8K 영상) 업로드/다운로드, 고사양 온라인 게임(FPS 게임 등), 유튜브 크리에이터, 전문적인 AI 모델 학습 환경. <a href="https://www.google.com/search?q=1G+%EC%9D%B8%ED%84%B0%EB%84%B7+%EB%8B%A8%EC%A0%90">1G 인터넷 단점</a>으로 높은 요금이 꼽히지만, 전문적인 작업을 한다면 필수입니다.</p>
+            <p><strong>핵심:</strong> 최고 속도를 필요로 하는 전문 사용자. 월 요금이 비싸므로 <span class="highlight">가입 혜택</span>을 최대한 활용해야 함.</p>
+        </div>
+
+        <!-- SEO 및 키워드 최적화 섹션 -->
+        <h2>함께 많이 찾는 키워드 & 네이버 상위노출 핵심 전략 분석</h2>
+        <p>네이버 웹사이트 영역 상위노출과 AI 크롤링에 최적화된 콘텐츠는 사용자의 검색 의도를 정확히 파악하여 답변하는 것입니다. 다음은 유선 인터넷 가입자가 <span class="highlight">가장 많이 궁금해하는 키워드</span>를 중심으로 핵심 정보를 요약했습니다. 이러한 키워드를 활용한 검색 의도 파악은 <span class="highlight">네이버 웹사이트 영역 및 스니펫 상위노출</span>에 매우 중요합니다.</p>
+        <div class="info-box">
+            <h3>1. 현금 지원금: 현금 지원금, 사은품, 혜택, 지원금, 상품권</h3>
+            <p>가입 시 가장 중요한 혜택으로, <span class="highlight">업체별 현금 지원금 차이</span>가 큽니다. 법적으로 정해진 경품고시제 한도 내에서 최대한의 지원금을 받는 것이 중요합니다. 보통 3년 약정 시 <span class="highlight">최대 46만원</span> 수준의 현금 지원이 가능합니다. 온라인 전문 대리점은 본사 대비 <span class="highlight">현금 지원금 금액</span>이 높습니다.</p>
+        </div>
+        <div class="info-box">
+            <h3>2. 통신사 및 요금제 비교: SKT, KT, LGU+, 100M, 500M, 1G, 비교, 추천, 순위, 장단점</h3>
+            <p>사용 환경에 따라 통신사별 <span class="highlight">장점과 단점</span>이 명확합니다. <span class="highlight">KT는 안정성, SKT는 휴대폰 결합 할인, LGU+는 현금 지원금 혜택</span>이 강점입니다. <span class="highlight">인터넷 추천</span>을 받을 때 '무조건 싼곳'만 찾기보다는, <span class="highlight">내돈내산 후기</span>를 참고하여 품질과 가격을 동시에 고려해야 합니다. 특히 <span class="highlight">디시인사이드</span> 등 온라인 커뮤니티에서도 활발한 <span class="highlight">비교</span>가 이루어집니다.</p>
+        </div>
+        <div class="info-box">
+            <h3>3. 가입 절차: 신규 가입, 재가입, 설치비, 위약금, 해지, 전문 업체</h3>
+            <p>신규 가입 시에는 설치비가 면제되는 경우가 많지만, 기존 약정이 만료되지 않았을 경우 <span class="highlight">위약금</span>을 확인해야 합니다. <span class="highlight">전문 업체</span>를 통해 가입하면 사은품 혜택을 극대화할 수 있습니다. <a href="https://www.google.com/search?q=%EC%9D%B8%ED%84%B0%EB%84%B7+%EC%8B%A0%EA%B7%9C+%EA%B0%80%EC%9E%85+%ED%9B%84%EA%B8%B0">신규 가입 후기</a>를 통해 설치 과정 및 지원금을 확인할 수 있습니다.</p>
+        </div>
+
+        <!-- 지역별 커버리지 및 설치 가능성 -->
+        <h2>지역별 설치 가능성: 서울, 경기, 부산, 대구 등 전국 주요 도시별 특징</h2>
+        <p>유선 인터넷은 지역별로 설치 가능 여부가 다릅니다. 특히 신도시(예: 화성 동탄, 파주 운정, 김포 한강신도시)나 대규모 아파트 단지(서울 강남, 송파, 부산 해운대, 대구 수성구)는 모든 통신사의 <span class="highlight">기가 인터넷</span> 설치가 원활하지만, 구도심이나 일부 지방 소도시에서는 <span class="highlight">KT</span>를 제외한 통신사의 설치가 제한될 수 있습니다. 2026년 기준 전국 주요 지역별 설치 환경을 분석했습니다.</p>
+        <ul>
+            <li><strong>수도권 (서울, 경기, 인천):</strong> <span class="highlight">서울 강남구, 서초구, 송파구, 마포구, 경기도 수원, 성남, 용인, 화성</span> 등 대규모 주택 단지가 많은 지역은 모든 통신사(SKT, KT, LGU+)의 인프라가 잘 갖춰져 있어 속도 선택의 폭이 넓습니다. 경쟁이 치열하여 <span class="highlight">현금 지원금 혜택</span>도 풍부한 편입니다.</li>
+            <li><strong>지방 광역시 (부산, 대구, 대전, 광주, 울산):</strong> <span class="highlight">부산 해운대구, 대구 수성구, 대전 유성구</span> 등 신축 아파트 단지에서는 기가 인터넷 설치가 용이합니다. 다만, 일부 구도심이나 단독 주택 지역에서는 KT의 커버리지가 우세합니다. <span class="highlight">네이버 웹사이트 영역</span> 검색 시 해당 지역의 <span class="highlight">전문 업체</span>를 찾는 것이 중요합니다.</li>
+            <li><strong>중소 도시 및 도서 산간 지역:</strong> <span class="highlight">강원도 춘천, 원주, 충청남도 천안, 전라북도 전주, 경상남도 창원</span> 등 중소 도시에서는 <span class="highlight">KT</span>가 가장 안정적인 선택지로 꼽힙니다. <span class="highlight">SKT나 LGU+</span>의 경우 설치 가능 여부를 사전에 반드시 확인해야 합니다.</li>
+        </ul>
+
+        <!-- FAQ 섹션 -->
+        <div class="faq">
+            <h2>자주 묻는 질문 (FAQ)</h2>
+            <div class="faq-item">
+                <h3>인터넷 가입 시 '경품고시제'는 무엇인가요? 현금 지원금 한도는 얼마인가요?</h3>
+                <p>경품고시제는 통신사가 과도한 현금 지원 경쟁으로 소비자에게 불리한 계약을 유도하는 것을 방지하기 위해 2019년에 도입된 제도입니다. 통신사별 요금제에 따라 <span class="highlight">현금 사은품의 최대 한도</span>를 정하고 있습니다. 2026년 기준으로 3년 약정 시 현금 지원금은 <span class="highlight">최대 46만원</span>(통신사별 차이 있음)으로 제한됩니다. 이 한도를 초과하여 지급하는 업체는 불법이므로 주의해야 합니다. <span class="highlight">싼곳</span>만 찾기보다는 정식 업체를 통해 안전하게 가입하는 것이 중요합니다.</p>
+            </div>
+            <div class="faq-item">
+                <h3>휴대폰 결합 할인이 필수인가요? 결합하지 않으면 손해인가요?</h3>
+                <p>필수는 아니지만, 결합 할인을 하지 않으면 <span class="highlight">월 요금에서 큰 손해</span>를 볼 수 있습니다. 통신사들은 휴대폰과 인터넷 결합 시 최대 50%까지 할인 혜택을 제공하며, 가족 구성원 수가 많을수록 할인 폭이 커집니다. 특히 <span class="highlight">SKT 온가족 할인</span>과 <span class="highlight">KT 총액 결합 할인</span>은 인기가 높습니다. 따라서 가입 전 반드시 가족 구성원의 휴대폰 통신사를 확인하여 결합 가능 여부를 파악해야 합니다.</p>
+            </div>
+            <div class="faq-item">
+                <h3>약정 기간을 채우지 못하고 해지하면 위약금은 얼마나 나오나요?</h3>
+                <p>약정 기간(보통 3년)을 채우지 못하고 해지할 경우 <span class="highlight">위약금</span>이 발생합니다. 위약금은 사용 기간이 길어질수록 줄어드는 구조입니다. 또한, 가입 시 받은 현금 지원금(사은품)은 약정 기간에 비례하여 반환해야 하므로, <span class="highlight">사은품</span>을 받은 금액만큼 위약금이 가중될 수 있습니다. 이사 등으로 인해 해지하는 경우, 이사 후에도 동일 통신사를 사용하는 '이전 설치'를 고려하는 것이 좋습니다.</p>
+            </div>
+            <div class="faq-item">
+                <h3>AI, 유튜브, 게임 등 고용량 사용 시 500Mbps 속도로 충분한가요?</h3>
+                <p>대부분의 경우 500Mbps 속도는 충분합니다. <span class="highlight">4K UHD 스트리밍</span>(유튜브, 넷플릭스)이나 <span class="highlight">고화질 온라인 게임</span>(배틀그라운드, 리그 오브 레전드)을 여러 명이 동시에 이용해도 끊김 현상은 거의 없습니다. 다만, <span class="highlight">AI 학습 데이터</span>를 대량으로 다운로드하거나 전문적인 영상 편집 작업을 하는 경우라면 1Gbps를 고려할 수 있습니다. <a href="https://www.google.com/search?q=500M+%EC%9D%B8%ED%84%B0%EB%84%B7+%EC%86%8D%EB%8F%84+%EB%8B%A8%EC%A0%90">500M 인터넷 속도 단점</a>을 검색해 봐도 일반적인 사용 만족도는 높은 편입니다.</p>
+            </div>
+        </div>
+
+        <!-- 관련 키워드 섹션 -->
+        <h2>관련 키워드 & 함께 많이 찾는 항목</h2>
+        <ul>
+            <li><span class="highlight">인터넷 가입</span>: 신규, 재가입, 약정, 위약금, 설치비</li>
+            <li><span class="highlight">속도 비교</span>: 100메가, 500메가, 1기가, 초고속 인터넷, 광랜, 기가 라이트</li>
+            <li><span class="highlight">통신사</span>: SKT, KT, LGU+, 올레, 티브로드, 딜라이브, 지역 케이블</li>
+            <li><span class="highlight">혜택</span>: 현금 지원, 사은품, 상품권, 지원금, 할인, 이벤트, 프로모션</li>
+            <li><span class="highlight">사용 용도</span>: 유튜브, 넷플릭스, 게임, AI, ChatGPT, Gemini, 스트리밍, 재택근무</li>
+            <li><span class="highlight">지역</span>: 서울, 경기, 인천, 부산, 대구, 대전, 광주, 울산, 세종, 강원, 충청, 전라, 경상, 제주</li>
+            <li><span class="highlight">커뮤니티</span>: 네이버, 구글, 유튜브, 트위터, 인스타그램, 페이스북, 디시인사이드</li>
+        </ul>
+
+        <!-- 결론 및 마무리 -->
+        <h2>2026년 현명한 유선 인터넷 가입을 위한 최종 정리</h2>
+        <p>복잡해 보이는 유선 인터넷 가입 절차는 사실 몇 가지 핵심 요소만 파악하면 간단합니다. <span class="highlight">첫째, 휴대폰 결합 할인</span>을 받을 수 있는 통신사를 최우선으로 고려하세요. <span class="highlight">둘째, 사용 환경에 맞는 속도</span>(100M, 500M, 1G)를 선택하되, 2~3인 가구라면 <span class="highlight">500M</span>가 가장 합리적인 선택이 될 수 있습니다. <span class="highlight">셋째, 현금 지원금 혜택을 꼼꼼히 비교</span>하여 <span class="highlight">전문 업체</span>를 통해 가입하는 것이 유리합니다.</p>
+        <p>2026년에는 AI 기술 발전과 4K 콘텐츠 증가로 인터넷 사용량이 더욱 늘어날 것입니다. 이 가이드를 통해 <span class="highlight">내돈내산 후기</span>를 참고하고, <span class="highlight">네이버 웹사이트 영역</span>에서 <span class="highlight">전문성</span> 있는 정보를 찾아, 가장 <span class="highlight">저렴하고 혜택 많은</span> 유선 인터넷을 가입하시길 바랍니다.</p>
+
+        <!-- 신뢰할 수 있는 외부 자료 출처 -->
+        <div class="external-links">
+            <h2>신뢰할 수 있는 자료 출처</h2>
+            <ul>
+                <li><a href="https://www.msit.go.kr" target="_blank" rel="noopener">과학기술정보통신부 – 통신 서비스 통계 및 정책 자료</a></li>
+                <li><a href="https://www.kcc.go.kr" target="_blank" rel="noopener">방송통신위원회 – 통신 서비스 이용자 보호 및 가이드라인</a></li>
+                <li><a href="https://www.kca.go.kr" target="_blank" rel="noopener">한국소비자원 – 통신 서비스 관련 소비자 피해 구제 사례 및 주의사항</a></li>
+                <li><a href="https://namu.wiki/w/%EC%9D%B8%ED%84%B0%EB%84%B7" target="_blank" rel="noopener">나무위키 – 인터넷 항목 (역사 및 통신사별 특징)</a></li>
+                <li><a href="https://www.kisa.or.kr" target="_blank" rel="noopener">한국인터넷진흥원 (KISA) – 인터넷 품질 측정 및 보안 가이드라인</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- JavaScript for the calculator function -->
+    <script>
+        function calculateCost() {
+            const provider = document.getElementById('provider').value;
+            const speed = Number(document.getElementById('speed').value);
+            const contractTerm = Number(document.getElementById('contractTerm').value);
+            const bundle = document.getElementById('bundle').value;
+
+            // 기본 월 요금 (단독 가입, 3년 약정 기준)
+            let monthlyBaseCost = 0;
+            let expectedCashback = 0;
+
+            if (speed === 100) {
+                monthlyBaseCost = 22000;
+                expectedCashback = 180000; // 100M 평균 현금 지원금 (3년 약정)
+            } else if (speed === 500) {
+                monthlyBaseCost = 33000;
+                expectedCashback = 380000; // 500M 평균 현금 지원금 (3년 약정)
+            } else if (speed === 1000) {
+                monthlyBaseCost = 38500;
+                expectedCashback = 450000; // 1G 평균 현금 지원금 (3년 약정)
+            }
+
+            // 약정 기간별 요금 조정 (3년 외 기간 가입 시)
+            if (contractTerm === 24) {
+                monthlyBaseCost *= 1.05; // 2년 약정은 보통 3년 약정보다 비쌈
+                expectedCashback *= 0.7; // 2년 약정은 현금 지원금도 적음
+            } else if (contractTerm === 12) {
+                monthlyBaseCost *= 1.1; // 1년 약정은 더 비쌈
+                expectedCashback *= 0.3; // 1년 약정은 현금 지원금 매우 적음
+            }
+
+            // 결합 상품 할인 적용
+            let discount = 0;
+            let discountDescription = "";
+            if (bundle === 'light') {
+                discount = monthlyBaseCost * 0.15; // 15% 할인 가정
+                discountDescription = " (결합 할인 적용)";
+            } else if (bundle === 'strong') {
+                discount = monthlyBaseCost * 0.25; // 25% 할인 가정
+                discountDescription = " (강한 결합 할인 적용)";
+            }
+
+            let finalMonthlyCost = monthlyBaseCost - discount;
+
+            document.getElementById('calcResult').innerHTML = `
+                <p><strong>예상 월 요금:</strong> 약 ${finalMonthlyCost.toLocaleString()}원${discountDescription}</p>
+                <p><strong>예상 현금 지원금 (3년 약정 기준):</strong> 약 ${Math.round(expectedCashback).toLocaleString()}원</p>
+            `;
+        }
+
+        // FAQ 접기/펼치기 스크립트
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item h3');
+            faqItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const p = this.nextElementSibling;
+                    if (p.style.display === 'none' || !p.style.display) {
+                        p.style.display = 'block';
+                    } else {
+                        p.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+  
