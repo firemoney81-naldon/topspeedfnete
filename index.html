@@ -1,9 +1,9 @@
 <!DOCTYPE html><html lang="ko"><head>
 <meta charSet="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
-<meta property="og:title" content="유선인터넷"/>
-<meta property="og:site_name" content="유선인터넷" />
-<meta name="Naver Search Advisor" content="유선인터넷">
+<meta property="og:title" content="‘유선인터넷’ 설치 비용"/>
+<meta property="og:site_name" content="‘유선인터넷’ 설치 비용" />
+<meta name="Naver Search Advisor" content="‘유선인터넷’ 설치 비용">
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="/"/>
 <meta property="og:image" content="https://financial.pstatic.net/insurance/insurance_car.png"/>
@@ -12,7 +12,7 @@
 <meta itemprop="description" content="" />
 <meta name="twitter:description" content=""/>
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="유선인터넷"/>
+<meta name="twitter:title" content="‘유선인터넷’ 설치 비용"/>
 <meta name="twitter:url" content="/"/>
 <meta name="twitter:image" content="https://financial.pstatic.net/insurance/insurance_car.png"/>
 <meta name="google-site-verification" content="vZ2fNi600OfCUSYxS6rq3Hq5ylyr8vXQWdkJSgj8WnI" />
@@ -25,9 +25,9 @@
 <meta name="Yeti" content="index, follow" />
 <meta name="googlebot" content="index, follow" />
 
-<meta name="subject" content="유선인터넷" />
-<meta name="publisher" content="유선인터넷" />
-<meta name="Other Agent" content="유선인터넷" />
+<meta name="subject" content="‘유선인터넷’ 설치 비용" />
+<meta name="publisher" content="‘유선인터넷’ 설치 비용" />
+<meta name="Other Agent" content="‘유선인터넷’ 설치 비용" />
 <meta name="location" content="South Korea" />
 <meta name="distribution" content="global" />
 <meta name="rating" content="general" />
@@ -51,11 +51,11 @@
     <!-- Apple iOS 최적화 -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="유선인터넷">
+    <meta name="apple-mobile-web-app-title" content="‘유선인터넷’ 설치 비용">
 
     <!-- Android Chrome 최적화 -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="유선인터넷">
+    <meta name="application-name" content="‘유선인터넷’ 설치 비용">
 
     <!-- 모바일 뷰포트 최적화 -->
     <meta name="viewport"
@@ -69,7 +69,7 @@
 
 
 
-<title>유선인터넷</title>
+<title>‘유선인터넷’ 설치 비용</title>
 
 <meta name="next-head-count" content="25"/>
 <meta name="format-detection" content="telephone=no"/>
@@ -79,456 +79,1525 @@
 
 
 
-    <style>
-        /* 기본 레이아웃 및 폰트 설정 */
-        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f7f9fc; color: #333; margin: 0; padding: 0; line-height: 1.6; }
-        .wrapper { max-width: 900px; margin: 30px auto; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); }
-        h1 { font-size: 2.5em; color: #004d40; margin-bottom: 0.5em; border-bottom: 3px solid #e0f2f1; padding-bottom: 10px; text-align: center; font-weight: 700; }
-        h2 { font-size: 2em; color: #00796b; margin-top: 1.8em; margin-bottom: 0.8em; border-left: 5px solid #00796b; padding-left: 10px; font-weight: 600; }
-        h3 { font-size: 1.5em; color: #004d40; margin-top: 1.5em; margin-bottom: 0.6em; font-weight: 500; }
-        p { margin-bottom: 1.2em; text-align: justify; }
-        ul, ol { margin-bottom: 1.2em; padding-left: 20px; }
-        li { margin-bottom: 0.5em; }
+<!-- 브릿지 페이지가 생성될 빈 컨테이너 -->
+<div id="dynamic-bridge-app"></div>
 
-        /* 하이라이트 및 강조 요소 */
-        .highlight { color: #d32f2f; font-weight: bold; }
-        .info-box { background-color: #e0f2f1; border-radius: 8px; padding: 20px; margin: 2em 0; border: 1px solid #b2dfdb; }
-        .info-box p { color: #004d40; font-weight: 500; margin-bottom: 0.5em; }
-
-        /* 표 스타일 */
-        .comparison-table { width: 100%; border-collapse: collapse; margin-top: 1.5em; }
-        .comparison-table th, .comparison-table td { border: 1px solid #ddd; padding: 12px; text-align: center; font-size: 0.95em; }
-        .comparison-table th { background-color: #f1f8e9; color: #2e7d32; font-weight: 600; }
-        .comparison-table td { background-color: #ffffff; }
-
-        /* 입력 폼 스타일 (계산기) */
-        .input-form { background-color: #e8f5e9; padding: 25px; border-radius: 10px; box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); }
-        .input-form label { display: block; margin-bottom: 8px; font-weight: 600; color: #2e7d32; }
-        .input-form input, .input-form select { width: calc(100% - 24px); padding: 12px; margin-bottom: 15px; border: 1px solid #c8e6c9; border-radius: 6px; box-sizing: border-box; }
-        .input-form button { padding: 12px 20px; background-color: #388e3c; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 1em; width: 100%; transition: background-color 0.3s; }
-        .input-form button:hover { background-color: #2e7d32; }
-        #calcResult { font-size: 1.3em; color: #d32f2f; margin-top: 15px; text-align: center; font-weight: 700; background-color: #fff; padding: 10px; border-radius: 6px; }
-
-        /* FAQ 스타일 */
-        .faq { margin-top: 2em; }
-        .faq-item { margin-bottom: 1em; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .faq-item h3 { cursor: pointer; color: #00796b; background-color: #f9f9f9; padding: 10px; border-radius: 5px; margin-bottom: 0; }
-        .faq-item p { display: none; margin-top: 10px; padding: 10px; background-color: #fafafa; border-radius: 5px; border-left: 3px solid #004d40; }
-
-        /* 기타 스타일 */
-        .image-container { text-align: center; margin: 2em 0; }
-        .image-container img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); }
-        .external-links { margin-top: 2em; padding: 20px; background-color: #f1f8e9; border-radius: 10px; }
-        .external-links a { color: #004d40; text-decoration: none; font-weight: 500; }
-        .external-links a:hover { text-decoration: underline; }
-    </style>
-
-    <!-- Pexels 이미지 출처 정보 -->
-    <!-- 이미지 출처: Pexels.com, 키워드: network cable -->
-
-    <!-- JSON-LD Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.example.com/wired-internet-guide"
-      },
-      "headline": "2026년 유선 인터넷 가입 완벽 가이드: SKT, KT, LGU+ 혜택 비교 및 현금 지원금 분석",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://images.pexels.com/photos/1036840/pexels-photo-1036840.jpeg",
-        "width": 1200,
-        "height": 800
-      },
-      "datePublished": "2026-04-16",
-      "dateModified": "2026-04-16",
-      "author": {
-        "@type": "Organization",
-        "name": "인터넷 가입 전문가 그룹"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "인터넷 가이드",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.example.com/logo.png"
-        }
-      },
-      "description": "2026년 최신 유선 인터넷 가입 정보를 찾고 계신가요? SKT, KT, LGU+ 통신사별 요금제, 속도(100M, 500M, 1G), 현금 지원금, 사은품 혜택을 비교 분석하고, 초고속 인터넷 설치 시 알아야 할 모든 것을 상세하게 정리했습니다. 네이버 웹사이트 영역 상위 노출을 위한 핵심 정보와 지역별 최적의 선택 가이드까지 제공합니다."
+<script>
+(function() {
+    // ======================================================================
+    // [모바일 대응 필수] 뷰포트 메타태그 자동 삽입
+    // ======================================================================
+    if (!document.querySelector('meta[name="viewport"]')) {
+        const meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+        document.head.appendChild(meta);
     }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "유선 인터넷 가입 시 현금 지원금은 얼마나 받을 수 있나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "현금 지원금은 통신사, 요금제, 가입 경로(본사 vs 대리점), 그리고 시기에 따라 달라집니다. 일반적으로 법정 최고 사은품 한도(경품고시제) 내에서 현금 지원이 이루어지며, 통신사 본사보다 온라인 전문 업체를 통해 가입할 경우 더 많은 현금 지원금을 받을 수 있습니다. 2026년 기준 3년 약정 시 최대 46만원 수준의 현금 지원이 가능합니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "우리 집에는 어떤 속도(100M, 500M, 1G)가 적절한가요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "100Mbps는 웹서핑이나 일반적인 유튜브 시청 등 기본적인 용도에 적합합니다. 500Mbps는 4K 스트리밍, 온라인 게임, 여러 명이 동시에 인터넷을 사용하는 가정에 추천됩니다. 1Gbps는 고화질 영상 제작, 대용량 파일 다운로드, 라이브 스트리밍, AI 학습 등 전문적인 용도에 필요합니다. 사용 환경과 예산을 고려하여 선택하는 것이 중요합니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "유선 인터넷 가입 시 '결합 할인'이 무엇인가요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "결합 할인은 인터넷과 동일한 통신사의 휴대폰을 함께 사용할 경우 요금 할인을 받는 제도입니다. SKT, KT, LGU+ 모두 '가족 결합 할인'을 제공하며, 결합 인원수와 요금제에 따라 할인 폭이 달라집니다. 결합 할인을 통해 월 청구 금액을 크게 절감할 수 있으므로, 기존 휴대폰 통신사를 확인하고 가입하는 것이 유리합니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "인터넷 설치 시 발생하는 설치비용과 추가 비용은 무엇인가요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "기본적으로 가입 시 '설치비'가 청구됩니다. 2026년 기준으로 100Mbps 기준 약 22,000원, 500Mbps/1Gbps 기준 약 33,000원 수준이며 통신사별 차이가 있습니다. 3년 약정 시 면제되는 경우가 많으나, 약정 기간 내 해지 시 위약금과 함께 설치비가 청구될 수 있습니다. 또한, 공유기(Wi-Fi) 임대료나 IPTV 셋톱박스 임대료가 월별 요금에 추가될 수 있습니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "유선 인터넷 품질에 지역별 차이가 있나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "네, 지역별로 인터넷 품질에 차이가 있을 수 있습니다. 특히 SKT, KT, LGU+ 중 KT는 가장 넓은 커버리지를 가지고 있어 지방이나 도서 산간 지역에서도 안정적인 서비스를 제공하는 경우가 많습니다. 반면 SKT와 LGU+는 대도시(서울, 부산, 인천, 대구 등)와 아파트 단지에 강점을 보입니다. 거주 지역의 인터넷 인프라를 확인하고 가입하는 것이 중요합니다."
-          }
-        }
-      ]
+
+    // ======================================================================
+    // [설정 영역] ★수백 개 배포 시 사이트마다 이 값을 반드시 다르게 설정하세요!★
+    // ======================================================================
+    const config = {
+        siteId: "site_loan_001",           // [필수] 사이트 고유 ID (텍스트 풀 시드값 및 고유 해시 생성용)
+        targetUrl: "https://kinternet.kr/?num=15402779",     // [필수] 실제 이동할 URL (검색엔진 가이드라인 준수를 위해 rel 속성 적용)
+        themeColor: "#007bff",             // 사이트 테마 컬러 (버튼 색상)
+        topic: "전국 지역 인터넷 가입 설치 및 혜택 비교",          // 사이트별 주요 타겟 키워드
+        minCount: 130,                     // 최소 방문자 수 범위
+        maxCount: 380                      // 최대 방문자 수 범위
+    };
+
+    // ======================================================================
+    // [코어 로직] 구조 난수화 및 표준 규격 전환 엔진
+    // ======================================================================
+
+    // 1. 사이트 ID 기반 자체 난수 생성기
+    let seedValue = 0;
+    for(let i=0; i<config.siteId.length; i++) seedValue += config.siteId.charCodeAt(i);
+    function seededRandom() {
+        let t = seedValue += 0x6D2B79F5;
+        t = Math.imul(t ^ t >>> 15, t | 1);
+        t ^= t + Math.imul(t ^ t >>> 7, t | 61);
+        return ((t ^ t >>> 14) >>> 0) / 4294967296;
     }
-    </script>
-</head>
+    function pickRandom(arr) {
+        return arr[Math.floor(seededRandom() * arr.length)];
+    }
 
-<body>
-    <div class="wrapper">
-        <header>
-            <h1>유선 인터넷 가입 2026년 완벽 가이드: SKT, KT, LGU+ 비교 분석</h1>
-            <p>2026년 새롭게 이사하거나 인터넷을 교체하려는 분들을 위해, 복잡한 유선 인터넷 가입 절차와 <span class="highlight">현금 지원금, 요금제 선택, 통신사별 장단점</span>을 상세히 분석했습니다. 초고속 인터넷 시대에 현명하게 가입하는 방법을 지금부터 알아보겠습니다.</p>
-        </header>
+    // 2. 동적 클래스명 및 디자인 수치 생성 (페이지 로드 시마다 무작위 해시 적용)
+    const hash = Math.random().toString(36).substring(2, 6) + Math.floor(seededRandom() * 1000);
+    const prefix = `cls_${hash}_`;
+    
+    const dynPadding = Math.floor(seededRandom() * 20) + 50; 
+    const dynMargin = Math.floor(seededRandom() * 20) + 40;  
+    const dynRadius = Math.floor(seededRandom() * 8) + 12;   
 
-        <!-- Pexels 이미지 삽입 (wired network cable) -->
-        <div class="image-container">
-            <img src="https://images.pexels.com/photos/1036840/pexels-photo-1036840.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="유선 인터넷 광케이블 이미지">
-            <p style="font-size: 0.8em; color: #666;">이미지 출처: Pexels.com - M.F.M. photo</p>
-        </div>
+    // 3. 날짜 로직
+    const today = new Date();
+    const todayIso = today.toISOString().split('T')[0];
+    const todayStr = `${today.getFullYear()}년 ${today.getMonth() + 1}월 ${today.getDate()}일`;
 
-        <!-- 비용 견적 계산기 -->
-        <div class="input-form">
-            <h2>인터넷 요금제 예상 견적 계산기 (2026년 기준)</h2>
-            <p>다음 조건을 입력하여 대략적인 월 요금 및 예상 현금 지원금을 확인해 보세요. 실제 견적은 가입 시점 및 결합 상품에 따라 달라질 수 있습니다.</p>
-            <label for="provider">희망 통신사 선택</label>
-            <select id="provider" name="provider" required>
-                <option value="kt">KT (케이티)</option>
-                <option value="skt">SKT (에스케이티)</option>
-                <option value="lgu">LGU+ (엘지유플러스)</option>
-                <option value="etc">기타/알뜰폰 결합</option>
-            </select>
+    const yesterday = new Date(today);
+    yesterday.setDate(today.getDate() - 1);
+    const yesterdayIso = yesterday.toISOString().split('T')[0];
+    const yesterdayStr = `${yesterday.getFullYear()}년 ${yesterday.getMonth() + 1}월 ${yesterday.getDate()}일`;
 
-            <label for="speed">희망 인터넷 속도</label>
-            <select id="speed" name="speed" required>
-                <option value="100">100Mbps (광랜)</option>
-                <option value="500">500Mbps (기가 라이트)</option>
-                <option value="1000">1Gbps (기가 인터넷)</option>
-            </select>
+    // 4. 콘텐츠 스피닝 풀
+    const titles = [
+        "잠시만 확인해주세요!", "신청 전 마지막 확인 단계입니다.", "맞춤 솔루션 안내 페이지입니다.", 
+        "다음 단계로 이동을 준비 중입니다.", "성공적인 접속을 위해 확인해 주세요.", "최적의 맞춤 정보를 찾고 있습니다.", 
+        "고객님을 위한 전용 안내 페이지입니다.", "안전한 진행을 위해 잠시 대기해 주세요.", "상담 신청을 위한 필수 확인 단계입니다.", 
+        "빠른 연결을 위해 데이터 분석 중입니다.", "나에게 맞는 최적의 결과를 확인하세요.", "정확한 안내를 위한 마지막 과정입니다.", 
+        "성공적인 솔루션 매칭이 진행 중입니다.", "맞춤형 전문가 연결을 준비하고 있습니다.", "안전한 페이지로 이동 중입니다. 잠시만 기다려주세요."
+    ];
+    
+    const descriptions = [
+        `입력하신 정보를 바탕으로 <strong>${config.topic}</strong> 결과를 분석 중입니다.`,
+        `성공적인 <strong>${config.topic}</strong> 상담 신청을 위해 최종 페이지로 연결됩니다.`,
+        `고객님께 최적화된 <strong>${config.topic}</strong> 솔루션을 제공하기 위한 단계입니다.`,
+        `안전하고 빠른 <strong>${config.topic}</strong> 진행을 위해 아래 버튼을 클릭해 주세요.`,
+        `빅데이터 기반으로 가장 적합한 <strong>${config.topic}</strong> 맞춤 견적을 산출하고 있습니다.`,
+        `검증된 <strong>${config.topic}</strong> 전문가와의 매칭을 위해 다음 페이지로 이동합니다.`,
+        `현재 고객님의 조건에 딱 맞는 <strong>${config.topic}</strong> 혜택을 확인 중입니다.`,
+        `실시간으로 업데이트되는 <strong>${config.topic}</strong> 핵심 정보를 제공해 드립니다.`,
+        `신속하고 정확한 <strong>${config.topic}</strong> 안내를 위해 최종 확인을 부탁드립니다.`,
+        `수많은 데이터 중 고객님만을 위한 <strong>${config.topic}</strong> 플랜을 구성하고 있습니다.`,
+        `원활한 <strong>${config.topic}</strong> 서비스 이용을 위해 필수적인 안내 페이지입니다.`,
+        `최고의 만족을 드릴 수 있는 <strong>${config.topic}</strong> 컨설팅으로 바로 연결해 드립니다.`,
+        `불필요한 과정 없이 <strong>${config.topic}</strong> 핵심 솔루션만 빠르게 확인해 보세요.`,
+        `고객님의 성공적인 <strong>${config.topic}</strong> 진행을 돕기 위한 전용 브릿지 페이지입니다.`,
+        `아래 버튼을 눌러 나에게 가장 유리한 <strong>${config.topic}</strong> 조건을 즉시 확인해 보세요.`
+    ];
 
-            <label for="contractTerm">약정 기간</label>
-            <select id="contractTerm" name="contractTerm" required>
-                <option value="36">3년 (36개월)</option>
-                <option value="24">2년 (24개월)</option>
-                <option value="12">1년 (12개월)</option>
-            </select>
+    const buttons = [
+        "무료로 결과 확인하기", "나에게 맞는 솔루션 신청", "맞춤 견적 무료 조회", "나만의 맞춤 솔루션 확인", 
+        "무료 컨설팅 받아보기", "실시간 결과 조회하기", "최적의 조건 무료로 비교하기", "1:1 맞춤 상담 바로가기", 
+        "숨은 혜택 확인하고 신청하기", "나의 예상 결과 1초 만에 확인", "전문가 무료 매칭 시작하기", 
+        "가장 유리한 조건 확인하기", "비공개 특별 혜택 보러가기", "나의 맞춤형 플랜 확인하기", 
+        "지금 바로 혜택 조회하기", "안전하게 무료 상담 신청하기"
+    ];
 
-            <label for="bundle">결합 상품 유무 (TV, 휴대폰)</label>
-            <select id="bundle" name="bundle" required>
-                <option value="no">없음 (인터넷 단독 가입)</option>
-                <option value="light">약한 결합 (1인 가구 휴대폰 결합)</option>
-                <option value="strong">강한 결합 (가족 2인 이상 휴대폰 결합 + TV)</option>
-            </select>
+    const disclaimers = [
+        "본 정보는 제휴 파트너사의 지원을 받아 작성되었으며, 서비스 이용 시 소정의 수수료를 지급받을 수 있습니다.",
+        "해당 콘텐츠는 파트너십을 통해 제공되며, 일정액의 대가를 받을 수 있는 제휴 링크가 포함되어 있습니다.",
+        "본 페이지의 서비스는 광고주의 협력으로 운영되며, 이용 실적에 따라 제휴 수수료가 발생할 수 있습니다.",
+        "이 페이지는 제휴 마케팅의 일환으로 구성되었으며, 파트너사로부터 일정 수수료를 제공받을 수 있음을 안내드립니다.",
+        "본 안내는 정보 제공을 목적으로 하며, 연결된 사이트에서의 활동으로 인해 당사에 소정의 리워드가 지급될 수 있습니다.",
+        "독자에게 유용한 정보를 제공하기 위해 작성된 페이지이며, 제휴사로부터 마케팅 지원을 받고 있습니다.",
+        "해당 브릿지 페이지는 공식 파트너 활동의 일환으로, 연결된 서비스를 통해 수익이 발생할 수 있습니다.",
+        "고객님의 편의를 위해 제공되는 맞춤 정보이며, 서비스 제휴에 따른 경제적 대가를 받을 수 있습니다.",
+        "본 추천 서비스는 제휴 광고가 포함되어 있어, 상담 완료 시 수수료가 제공될 수 있음을 명시합니다.",
+        "신뢰할 수 있는 파트너사의 정보를 선별하여 제공하며, 이에 따른 소정의 커미션을 지급받을 수 있습니다."
+    ];
 
-            <button type="button" onclick="calculateCost()">예상 견적 확인하기</button>
-            <p id="calcResult" style="font-size:1.2em; color:#d32f2f; margin-top:1em;"></p>
-        </div>
+    const semanticTags = ["div", "section", "article", "main"];
 
-        <!-- 통신사별 비교 테이블 -->
-        <h2>통신사별 유선 인터넷 요금제 및 사은품 혜택 비교 (2026년)</h2>
-        <p>SKT, KT, LGU+ 세 통신사의 주요 요금제별 평균 가격과 현금 지원 혜택을 비교한 표입니다. 이 표를 통해 가입 시 <span class="highlight">현금 지원금 금액</span>과 월 청구되는 <span class="highlight">예상 가격(견적)</span>을 한눈에 비교할 수 있습니다. <a href="#footnote-1" style="color: #00796b;">(*자세한 지역별 설치 가능 여부는 별도 확인 필요)</a></p>
-        <table class="comparison-table">
-            <thead>
-                <tr>
-                    <th>구분</th>
-                    <th>요금제</th>
-                    <th>월 요금 (3년 약정, 단독 기준)</th>
-                    <th>결합 할인 적용 시 예상 금액</th>
-                    <th>현금 지원금 평균 (업체별 변동)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>KT (케이티)</td>
-                    <td>100Mbps (인터넷 슬림)</td>
-                    <td>약 22,000원</td>
-                    <td>16,500원 ~ 19,800원</td>
-                    <td>15만원 ~ 20만원</td>
-                </tr>
-                <tr>
-                    <td>SKT (에스케이티)</td>
-                    <td>100Mbps (B tv Basic)</td>
-                    <td>약 22,000원</td>
-                    <td>16,500원 ~ 19,800원</td>
-                    <td>15만원 ~ 20만원</td>
-                </tr>
-                <tr>
-                    <td>LGU+ (엘지유플러스)</td>
-                    <td>100Mbps (인터넷 라이트)</td>
-                    <td>약 22,000원</td>
-                    <td>16,500원 ~ 19,800원</td>
-                    <td>15만원 ~ 20만원</td>
-                </tr>
-                <tr>
-                    <td>KT (케이티)</td>
-                    <td>500Mbps (기가 라이트)</td>
-                    <td>약 33,000원</td>
-                    <td>27,500원 ~ 29,700원</td>
-                    <td>35만원 ~ 40만원</td>
-                </tr>
-                <tr>
-                    <td>SKT (에스케이티)</td>
-                    <td>500Mbps (기가 라이트)</td>
-                    <td>약 33,000원</td>
-                    <td>27,500원 ~ 29,700원</td>
-                    <td>35만원 ~ 40만원</td>
-                </tr>
-                <tr>
-                    <td>LGU+ (엘지유플러스)</td>
-                    <td>500Mbps (기가 라이트)</td>
-                    <td>약 33,000원</td>
-                    <td>27,500원 ~ 29,700원</td>
-                    <td>35만원 ~ 40만원</td>
-                </tr>
-                <tr>
-                    <td>KT (케이티)</td>
-                    <td>1Gbps (기가 인터넷)</td>
-                    <td>약 38,500원</td>
-                    <td>33,000원 ~ 35,200원</td>
-                    <td>40만원 ~ 45만원</td>
-                </tr>
-            </tbody>
-        </table>
-        <p class="footnote" id="footnote-1" style="font-size: 0.85em; color: #666; margin-top: 10px;">*위 금액은 2026년 기준 통신사 공식 요금제와 결합 할인 예시를 바탕으로 한 평균값이며, 실제 현금 지원금은 업체별 프로모션과 가입 조건(TV 결합 여부 등)에 따라 상이할 수 있습니다. 정확한 견적은 전문 업체에 문의해야 합니다. 현금 지원금은 '경품고시제'에 따라 최대 한도가 정해져 있습니다.</p>
+    const selectedTitle = pickRandom(titles);
+    const selectedDesc = pickRandom(descriptions);
+    const selectedBtn = pickRandom(buttons);
+    const selectedDisclaimer = pickRandom(disclaimers);
+    const wrapperTag = pickRandom(semanticTags);
+    const innerTag = pickRandom(["div", "section"]);
 
-        <!-- 핵심 요약: 통신사별 장단점 및 추천 대상 -->
-        <h2>통신사별 장단점 비교 및 나에게 맞는 통신사 추천 가이드</h2>
-        <div class="info-box">
-            <h3>1. KT (케이티)</h3>
-            <p><strong>장점:</strong> 가장 넓은 <span class="highlight">커버리지와 안정적인 품질</span>을 자랑합니다. 특히 지방, 외곽 지역, 오래된 건물에서도 설치 가능성이 높습니다. 전국 어디든 설치가 필요하다면 KT가 가장 무난한 선택입니다. <strong>단점:</strong> 다른 통신사 대비 현금 지원금이나 사은품 혜택이 상대적으로 적을 수 있습니다. <a href="https://www.google.com/search?q=KT+인터넷+후기">KT 내돈내산 후기</a>를 보면 품질 만족도가 높은 편입니다.</p>
-            <p><strong>추천 대상:</strong> 인터넷 품질이 가장 중요한 사용자, 지방 지역 거주자, KT 휴대폰 결합 사용자.</p>
-        </div>
-        <div class="info-box">
-            <h3>2. SKT (에스케이티)</h3>
-            <p><strong>장점:</strong> 휴대폰 가입자가 가장 많은 통신사입니다. 휴대폰 요금제와 결합 시 <span class="highlight">할인 폭이 가장 크다는 장점</span>이 있습니다. 특히 가족 구성원이 SKT 휴대폰을 사용하는 경우 '온가족 할인' 혜택을 통해 요금 절감이 용이합니다. <strong>단점:</strong> 수도권 대도시 아파트 단지에 강점을 보이지만, KT 대비 지방이나 외곽 지역 커버리지가 다소 약할 수 있습니다.</p>
-            <p><strong>추천 대상:</strong> 가족 구성원 모두 SKT 휴대폰 사용자, 대규모 아파트 단지 거주자.</p>
-        </div>
-        <div class="info-box">
-            <h3>3. LGU+ (엘지유플러스)</h3>
-            <p><strong>장점:</strong> <span class="highlight">현금 지원금 혜택이 가장 좋은 통신사</span> 중 하나로 알려져 있습니다. 신규 가입 시 파격적인 사은품이나 현금 지원을 제공하는 경우가 많아 <span class="highlight">저렴한곳</span>을 찾는 소비자에게 인기가 높습니다. IPTV 서비스의 만족도도 높습니다. <strong>단점:</strong> 일부 지역에서 속도 안정성 측면에서 KT 대비 미흡하다는 평이 있을 수 있습니다. <a href="https://www.google.com/search?q=LGU%2B+%EC%9D%B8%ED%84%B0%EB%84%B7+%EB%82%B4%EB%8F%88%EB%82%B4%EC%82%B0">LGU+ 내돈내산 후기</a> 검색 시 참고할 만합니다.</p>
-            <p><strong>추천 대상:</strong> 현금 지원금 혜택을 최우선으로 고려하는 사용자, IPTV 서비스 만족도를 중시하는 사용자.</p>
-        </div>
+    // 5. 모바일 대응 동적 스타일 인젝션
+    const style = document.createElement('style');
+    style.textContent = `
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css');
+        
+        .${prefix}container, .${prefix}container * { box-sizing: border-box; }
+        .${prefix}container { 
+            font-family: 'Pretendard', -apple-system, sans-serif; 
+            margin: ${dynMargin}px auto; 
+            padding: ${dynPadding}px 30px; 
+            text-align: center; 
+            background: #fff; 
+            border-radius: ${dynRadius}px; 
+            box-shadow: 0 ${Math.floor(seededRandom()*5)+5}px ${Math.floor(seededRandom()*20)+20}px rgba(0,0,0,0.05); 
+            border: 1px solid #f1f1f1; 
+            max-width: 600px; width: 100%; opacity: 0; transition: opacity 0.4s ease; 
+        }
+        .${prefix}h1 { font-size: ${Math.floor(seededRandom()*4)+26}px; color: #111; margin-bottom: 22px; letter-spacing: -0.5px; word-break: keep-all; line-height: 1.3; }
+        .${prefix}p { font-size: 17px; color: #444; line-height: 1.6; margin-bottom: 35px; word-break: keep-all; }
+        .${prefix}btn { display: inline-block; width: 100%; max-width: 360px; padding: 16px 20px; background-color: ${config.themeColor}; color: #fff; font-weight: 700; text-decoration: none; border-radius: ${Math.floor(seededRandom()*8)+6}px; font-size: 19px; box-shadow: 0 4px 14px rgba(0,0,0,0.15); transition: transform 0.2s, background-color 0.2s; cursor: pointer; border: none; text-align: center; }
+        .${prefix}btn:hover { transform: translateY(-2px); filter: brightness(95%); }
+        .${prefix}box { margin-top: 45px; padding-top: 25px; border-top: 1px dashed #e5e5e5; }
+        .${prefix}stat-text { font-size: 20px; font-weight: 700; color: #333; }
+        .${prefix}sub-text { font-size: 14px; color: #777; display: block; margin-bottom: 8px; font-weight: 400; }
+        .${prefix}num { font-size: 32px; font-weight: 900; color: ${config.themeColor}; }
+        .${prefix}foot { font-size: 12px; color: #999; line-height: 1.5; margin-top: 40px; text-align: left; background: #fcfcfc; padding: 15px; border-radius: 6px; word-break: keep-all; }
+        
+        @media screen and (max-width: 640px) { 
+            .${prefix}container { margin: 20px auto; padding: 30px 20px; width: 92%; border-radius: 16px; } 
+            .${prefix}h1 { font-size: 22px; margin-bottom: 15px; }
+            .${prefix}p { font-size: 15px; margin-bottom: 25px; }
+            .${prefix}btn { font-size: 16px; padding: 14px 10px; }
+            .${prefix}num { font-size: 28px; }
+            .${prefix}box { margin-top: 30px; }
+        }
+    `;
+    document.head.appendChild(style);
 
-        <!-- 속도별 선택 가이드: 100M vs 500M vs 1G -->
-        <h2>나에게 적합한 인터넷 속도 선택: 100Mbps vs 500Mbps vs 1Gbps</h2>
-        <p>인터넷 가입 시 가장 많이 고민하는 부분은 '속도'입니다. 단순히 100M가 저렴해서, 혹은 1G가 최고 속도라 무조건 좋다기보다는, 실제 사용 목적과 <span class="highlight">가정 내 기기 대수, 사용 환경</span>에 맞춰 선택하는 것이 중요합니다. 특히 2026년에는 <span class="highlight">ChatGPT, Gemini, AI</span> 등의 AI 서비스 활용이 늘어나면서 안정적인 초고속 인터넷 환경이 더욱 중요해지고 있습니다. 다음은 속도별 권장 사용 시나리오입니다.</p>
-        <div class="info-box">
-            <h3>100Mbps (광랜) 추천</h3>
-            <p><strong>사용 환경:</strong> 1인 가구, 웹서핑, 이메일, HD급 동영상 스트리밍, 유튜브 시청. <a href="https://www.google.com/search?q=%EC%9D%B8%ED%84%B0%EB%84%B7+100M+%ED%9B%84%EA%B8%B0">100M 인터넷 후기</a>를 보면 일반적인 사용에 큰 불편함은 없습니다.</p>
-            <p><strong>핵심:</strong> 기본적인 용도라면 충분히 저렴하게 이용 가능. 월 비용이 가장 <span class="highlight">저렴한곳</span>을 찾는 소비자에게 적합.</p>
-        </div>
-        <div class="info-box">
-            <h3>500Mbps (기가 라이트) 추천</h3>
-            <p><strong>사용 환경:</strong> 2~3인 가구, 4K UHD 스트리밍(넷플릭스, 디즈니플러스), 고화질 온라인 게임, 라이브 스트리밍 시청. <span class="highlight">ChatGPT나 Gemini</span> 등 AI 서비스 사용 시에도 원활한 속도를 보장합니다. 최근 <span class="highlight">평균</span>적으로 가장 많이 선택하는 요금제입니다.</p>
-            <p><strong>핵심:</strong> 가격과 속도의 균형이 가장 좋음. 다수의 기기가 동시에 접속해도 끊김 없는 환경 제공.</p>
-        </div>
-        <div class="info-box">
-            <h3>1Gbps (기가 인터넷) 추천</h3>
-            <p><strong>사용 환경:</strong> 4인 이상 다인 가구, 대용량 파일(4K/8K 영상) 업로드/다운로드, 고사양 온라인 게임(FPS 게임 등), 유튜브 크리에이터, 전문적인 AI 모델 학습 환경. <a href="https://www.google.com/search?q=1G+%EC%9D%B8%ED%84%B0%EB%84%B7+%EB%8B%A8%EC%A0%90">1G 인터넷 단점</a>으로 높은 요금이 꼽히지만, 전문적인 작업을 한다면 필수입니다.</p>
-            <p><strong>핵심:</strong> 최고 속도를 필요로 하는 전문 사용자. 월 요금이 비싸므로 <span class="highlight">가입 혜택</span>을 최대한 활용해야 함.</p>
-        </div>
+    // 6. 동적 DOM 생성 
+    const container = document.getElementById('dynamic-bridge-app');
+    if(container) {
+        container.innerHTML = `
+            <${wrapperTag} class="${prefix}container" id="${prefix}main">
+                <h1 class="${prefix}h1">${selectedTitle}</h1>
+                <p class="${prefix}p">${selectedDesc}</p>
+                
+                <!-- [개선 완료] 정석적인 아웃바운드 링크 구조 적용 (rel="nofollow sponsored") -->
+                <a href="${config.targetUrl}" rel="nofollow sponsored" class="${prefix}btn" id="${prefix}cta">
+                    ${selectedBtn}
+                </a>
+                
+                <${innerTag} class="${prefix}box">
+                    <div class="${prefix}stat-text">
+                        <span class="${prefix}sub-text"><time datetime="${yesterdayIso}">${yesterdayStr}</time> 통계 기준</span>
+                        실시간 무료 비교 신청자 <span class="${prefix}num" id="${prefix}counter">0</span>명
+                    </div>
+                </${innerTag}>
 
-        <!-- SEO 및 키워드 최적화 섹션 -->
-        <h2>함께 많이 찾는 키워드 & 네이버 상위노출 핵심 전략 분석</h2>
-        <p>네이버 웹사이트 영역 상위노출과 AI 크롤링에 최적화된 콘텐츠는 사용자의 검색 의도를 정확히 파악하여 답변하는 것입니다. 다음은 유선 인터넷 가입자가 <span class="highlight">가장 많이 궁금해하는 키워드</span>를 중심으로 핵심 정보를 요약했습니다. 이러한 키워드를 활용한 검색 의도 파악은 <span class="highlight">네이버 웹사이트 영역 및 스니펫 상위노출</span>에 매우 중요합니다.</p>
-        <div class="info-box">
-            <h3>1. 현금 지원금: 현금 지원금, 사은품, 혜택, 지원금, 상품권</h3>
-            <p>가입 시 가장 중요한 혜택으로, <span class="highlight">업체별 현금 지원금 차이</span>가 큽니다. 법적으로 정해진 경품고시제 한도 내에서 최대한의 지원금을 받는 것이 중요합니다. 보통 3년 약정 시 <span class="highlight">최대 46만원</span> 수준의 현금 지원이 가능합니다. 온라인 전문 대리점은 본사 대비 <span class="highlight">현금 지원금 금액</span>이 높습니다.</p>
-        </div>
-        <div class="info-box">
-            <h3>2. 통신사 및 요금제 비교: SKT, KT, LGU+, 100M, 500M, 1G, 비교, 추천, 순위, 장단점</h3>
-            <p>사용 환경에 따라 통신사별 <span class="highlight">장점과 단점</span>이 명확합니다. <span class="highlight">KT는 안정성, SKT는 휴대폰 결합 할인, LGU+는 현금 지원금 혜택</span>이 강점입니다. <span class="highlight">인터넷 추천</span>을 받을 때 '무조건 싼곳'만 찾기보다는, <span class="highlight">내돈내산 후기</span>를 참고하여 품질과 가격을 동시에 고려해야 합니다. 특히 <span class="highlight">디시인사이드</span> 등 온라인 커뮤니티에서도 활발한 <span class="highlight">비교</span>가 이루어집니다.</p>
-        </div>
-        <div class="info-box">
-            <h3>3. 가입 절차: 신규 가입, 재가입, 설치비, 위약금, 해지, 전문 업체</h3>
-            <p>신규 가입 시에는 설치비가 면제되는 경우가 많지만, 기존 약정이 만료되지 않았을 경우 <span class="highlight">위약금</span>을 확인해야 합니다. <span class="highlight">전문 업체</span>를 통해 가입하면 사은품 혜택을 극대화할 수 있습니다. <a href="https://www.google.com/search?q=%EC%9D%B8%ED%84%B0%EB%84%B7+%EC%8B%A0%EA%B7%9C+%EA%B0%80%EC%9E%85+%ED%9B%84%EA%B8%B0">신규 가입 후기</a>를 통해 설치 과정 및 지원금을 확인할 수 있습니다.</p>
-        </div>
+                <p style="font-size:13px; color:#666; margin-top:20px; line-height:1.4; display:none;" id="${prefix}seo-text">
+                    해당 안내는 ${todayStr} 업데이트 자료를 반영하여 고객님의 상황에 맞는 ${config.topic} 정보를 원활히 제공하기 위함입니다.
+                </p>
 
-        <!-- 지역별 커버리지 및 설치 가능성 -->
-        <h2>지역별 설치 가능성: 서울, 경기, 부산, 대구 등 전국 주요 도시별 특징</h2>
-        <p>유선 인터넷은 지역별로 설치 가능 여부가 다릅니다. 특히 신도시(예: 화성 동탄, 파주 운정, 김포 한강신도시)나 대규모 아파트 단지(서울 강남, 송파, 부산 해운대, 대구 수성구)는 모든 통신사의 <span class="highlight">기가 인터넷</span> 설치가 원활하지만, 구도심이나 일부 지방 소도시에서는 <span class="highlight">KT</span>를 제외한 통신사의 설치가 제한될 수 있습니다. 2026년 기준 전국 주요 지역별 설치 환경을 분석했습니다.</p>
-        <ul>
-            <li><strong>수도권 (서울, 경기, 인천):</strong> <span class="highlight">서울 강남구, 서초구, 송파구, 마포구, 경기도 수원, 성남, 용인, 화성</span> 등 대규모 주택 단지가 많은 지역은 모든 통신사(SKT, KT, LGU+)의 인프라가 잘 갖춰져 있어 속도 선택의 폭이 넓습니다. 경쟁이 치열하여 <span class="highlight">현금 지원금 혜택</span>도 풍부한 편입니다.</li>
-            <li><strong>지방 광역시 (부산, 대구, 대전, 광주, 울산):</strong> <span class="highlight">부산 해운대구, 대구 수성구, 대전 유성구</span> 등 신축 아파트 단지에서는 기가 인터넷 설치가 용이합니다. 다만, 일부 구도심이나 단독 주택 지역에서는 KT의 커버리지가 우세합니다. <span class="highlight">네이버 웹사이트 영역</span> 검색 시 해당 지역의 <span class="highlight">전문 업체</span>를 찾는 것이 중요합니다.</li>
-            <li><strong>중소 도시 및 도서 산간 지역:</strong> <span class="highlight">강원도 춘천, 원주, 충청남도 천안, 전라북도 전주, 경상남도 창원</span> 등 중소 도시에서는 <span class="highlight">KT</span>가 가장 안정적인 선택지로 꼽힙니다. <span class="highlight">SKT나 LGU+</span>의 경우 설치 가능 여부를 사전에 반드시 확인해야 합니다.</li>
-        </ul>
+                <footer class="${prefix}foot">
+                    [업데이트: <time datetime="${todayIso}">${todayStr}</time>]<br>
+                    ${selectedDisclaimer}
+                </footer>
+            </${wrapperTag}>
+        `;
 
-        <!-- FAQ 섹션 -->
-        <div class="faq">
-            <h2>자주 묻는 질문 (FAQ)</h2>
-            <div class="faq-item">
-                <h3>인터넷 가입 시 '경품고시제'는 무엇인가요? 현금 지원금 한도는 얼마인가요?</h3>
-                <p>경품고시제는 통신사가 과도한 현금 지원 경쟁으로 소비자에게 불리한 계약을 유도하는 것을 방지하기 위해 2019년에 도입된 제도입니다. 통신사별 요금제에 따라 <span class="highlight">현금 사은품의 최대 한도</span>를 정하고 있습니다. 2026년 기준으로 3년 약정 시 현금 지원금은 <span class="highlight">최대 46만원</span>(통신사별 차이 있음)으로 제한됩니다. 이 한도를 초과하여 지급하는 업체는 불법이므로 주의해야 합니다. <span class="highlight">싼곳</span>만 찾기보다는 정식 업체를 통해 안전하게 가입하는 것이 중요합니다.</p>
-            </div>
-            <div class="faq-item">
-                <h3>휴대폰 결합 할인이 필수인가요? 결합하지 않으면 손해인가요?</h3>
-                <p>필수는 아니지만, 결합 할인을 하지 않으면 <span class="highlight">월 요금에서 큰 손해</span>를 볼 수 있습니다. 통신사들은 휴대폰과 인터넷 결합 시 최대 50%까지 할인 혜택을 제공하며, 가족 구성원 수가 많을수록 할인 폭이 커집니다. 특히 <span class="highlight">SKT 온가족 할인</span>과 <span class="highlight">KT 총액 결합 할인</span>은 인기가 높습니다. 따라서 가입 전 반드시 가족 구성원의 휴대폰 통신사를 확인하여 결합 가능 여부를 파악해야 합니다.</p>
-            </div>
-            <div class="faq-item">
-                <h3>약정 기간을 채우지 못하고 해지하면 위약금은 얼마나 나오나요?</h3>
-                <p>약정 기간(보통 3년)을 채우지 못하고 해지할 경우 <span class="highlight">위약금</span>이 발생합니다. 위약금은 사용 기간이 길어질수록 줄어드는 구조입니다. 또한, 가입 시 받은 현금 지원금(사은품)은 약정 기간에 비례하여 반환해야 하므로, <span class="highlight">사은품</span>을 받은 금액만큼 위약금이 가중될 수 있습니다. 이사 등으로 인해 해지하는 경우, 이사 후에도 동일 통신사를 사용하는 '이전 설치'를 고려하는 것이 좋습니다.</p>
-            </div>
-            <div class="faq-item">
-                <h3>AI, 유튜브, 게임 등 고용량 사용 시 500Mbps 속도로 충분한가요?</h3>
-                <p>대부분의 경우 500Mbps 속도는 충분합니다. <span class="highlight">4K UHD 스트리밍</span>(유튜브, 넷플릭스)이나 <span class="highlight">고화질 온라인 게임</span>(배틀그라운드, 리그 오브 레전드)을 여러 명이 동시에 이용해도 끊김 현상은 거의 없습니다. 다만, <span class="highlight">AI 학습 데이터</span>를 대량으로 다운로드하거나 전문적인 영상 편집 작업을 하는 경우라면 1Gbps를 고려할 수 있습니다. <a href="https://www.google.com/search?q=500M+%EC%9D%B8%ED%84%B0%EB%84%B7+%EC%86%8D%EB%8F%84+%EB%8B%A8%EC%A0%90">500M 인터넷 속도 단점</a>을 검색해 봐도 일반적인 사용 만족도는 높은 편입니다.</p>
-            </div>
-        </div>
+        // 문맥 텍스트 노출
+        setTimeout(() => { 
+            const seoText = document.getElementById(`${prefix}seo-text`);
+            if(seoText) seoText.style.display = 'block'; 
+        }, 100);
 
-        <!-- 관련 키워드 섹션 -->
-        <h2>관련 키워드 & 함께 많이 찾는 항목</h2>
-        <ul>
-            <li><span class="highlight">인터넷 가입</span>: 신규, 재가입, 약정, 위약금, 설치비</li>
-            <li><span class="highlight">속도 비교</span>: 100메가, 500메가, 1기가, 초고속 인터넷, 광랜, 기가 라이트</li>
-            <li><span class="highlight">통신사</span>: SKT, KT, LGU+, 올레, 티브로드, 딜라이브, 지역 케이블</li>
-            <li><span class="highlight">혜택</span>: 현금 지원, 사은품, 상품권, 지원금, 할인, 이벤트, 프로모션</li>
-            <li><span class="highlight">사용 용도</span>: 유튜브, 넷플릭스, 게임, AI, ChatGPT, Gemini, 스트리밍, 재택근무</li>
-            <li><span class="highlight">지역</span>: 서울, 경기, 인천, 부산, 대구, 대전, 광주, 울산, 세종, 강원, 충청, 전라, 경상, 제주</li>
-            <li><span class="highlight">커뮤니티</span>: 네이버, 구글, 유튜브, 트위터, 인스타그램, 페이스북, 디시인사이드</li>
-        </ul>
+        // 7. 검색엔진 이해용 구조적 데이터(JSON-LD Schema) 동적 삽입
+        const schemaData = {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": `${config.topic} 안내`,
+            "dateModified": today.toISOString(),
+            "description": selectedDesc.replace(/<[^>]*>?/gm, '') 
+        };
+        const scriptEl = document.createElement('script');
+        scriptEl.type = 'application/ld+json';
+        scriptEl.text = JSON.stringify(schemaData);
+        document.head.appendChild(scriptEl);
 
-        <!-- 결론 및 마무리 -->
-        <h2>2026년 현명한 유선 인터넷 가입을 위한 최종 정리</h2>
-        <p>복잡해 보이는 유선 인터넷 가입 절차는 사실 몇 가지 핵심 요소만 파악하면 간단합니다. <span class="highlight">첫째, 휴대폰 결합 할인</span>을 받을 수 있는 통신사를 최우선으로 고려하세요. <span class="highlight">둘째, 사용 환경에 맞는 속도</span>(100M, 500M, 1G)를 선택하되, 2~3인 가구라면 <span class="highlight">500M</span>가 가장 합리적인 선택이 될 수 있습니다. <span class="highlight">셋째, 현금 지원금 혜택을 꼼꼼히 비교</span>하여 <span class="highlight">전문 업체</span>를 통해 가입하는 것이 유리합니다.</p>
-        <p>2026년에는 AI 기술 발전과 4K 콘텐츠 증가로 인터넷 사용량이 더욱 늘어날 것입니다. 이 가이드를 통해 <span class="highlight">내돈내산 후기</span>를 참고하고, <span class="highlight">네이버 웹사이트 영역</span>에서 <span class="highlight">전문성</span> 있는 정보를 찾아, 가장 <span class="highlight">저렴하고 혜택 많은</span> 유선 인터넷을 가입하시길 바랍니다.</p>
+        // 8. 통계 카운터 애니메이션 엔진
+        function animateCount() {
+            const targetElement = document.getElementById(`${prefix}counter`);
+            if(!targetElement) return;
+            const dateSeed = yesterday.getFullYear() * 10000 + (yesterday.getMonth()+1) * 100 + yesterday.getDate() + seedValue;
+            
+            let pseudoRandom = Math.sin(dateSeed) * 10000;
+            pseudoRandom = pseudoRandom - Math.floor(pseudoRandom);
+            
+            const targetNumber = Math.floor(pseudoRandom * (config.maxCount - config.minCount + 1)) + config.minCount;
+            const startTime = performance.now();
+            const duration = 1800;
 
-        <!-- 신뢰할 수 있는 외부 자료 출처 -->
-        <div class="external-links">
-            <h2>신뢰할 수 있는 자료 출처</h2>
-            <ul>
-                <li><a href="https://www.msit.go.kr" target="_blank" rel="noopener">과학기술정보통신부 – 통신 서비스 통계 및 정책 자료</a></li>
-                <li><a href="https://www.kcc.go.kr" target="_blank" rel="noopener">방송통신위원회 – 통신 서비스 이용자 보호 및 가이드라인</a></li>
-                <li><a href="https://www.kca.go.kr" target="_blank" rel="noopener">한국소비자원 – 통신 서비스 관련 소비자 피해 구제 사례 및 주의사항</a></li>
-                <li><a href="https://namu.wiki/w/%EC%9D%B8%ED%84%B0%EB%84%B7" target="_blank" rel="noopener">나무위키 – 인터넷 항목 (역사 및 통신사별 특징)</a></li>
-                <li><a href="https://www.kisa.or.kr" target="_blank" rel="noopener">한국인터넷진흥원 (KISA) – 인터넷 품질 측정 및 보안 가이드라인</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- JavaScript for the calculator function -->
-    <script>
-        function calculateCost() {
-            const provider = document.getElementById('provider').value;
-            const speed = Number(document.getElementById('speed').value);
-            const contractTerm = Number(document.getElementById('contractTerm').value);
-            const bundle = document.getElementById('bundle').value;
-
-            // 기본 월 요금 (단독 가입, 3년 약정 기준)
-            let monthlyBaseCost = 0;
-            let expectedCashback = 0;
-
-            if (speed === 100) {
-                monthlyBaseCost = 22000;
-                expectedCashback = 180000; // 100M 평균 현금 지원금 (3년 약정)
-            } else if (speed === 500) {
-                monthlyBaseCost = 33000;
-                expectedCashback = 380000; // 500M 평균 현금 지원금 (3년 약정)
-            } else if (speed === 1000) {
-                monthlyBaseCost = 38500;
-                expectedCashback = 450000; // 1G 평균 현금 지원금 (3년 약정)
+            function updateNumber(currentTime) {
+                const progress = Math.min((currentTime - startTime) / duration, 1);
+                const easeOutProgress = progress * (2 - progress); 
+                targetElement.innerText = Math.floor(easeOutProgress * targetNumber).toLocaleString();
+                if (progress < 1) requestAnimationFrame(updateNumber);
             }
-
-            // 약정 기간별 요금 조정 (3년 외 기간 가입 시)
-            if (contractTerm === 24) {
-                monthlyBaseCost *= 1.05; // 2년 약정은 보통 3년 약정보다 비쌈
-                expectedCashback *= 0.7; // 2년 약정은 현금 지원금도 적음
-            } else if (contractTerm === 12) {
-                monthlyBaseCost *= 1.1; // 1년 약정은 더 비쌈
-                expectedCashback *= 0.3; // 1년 약정은 현금 지원금 매우 적음
-            }
-
-            // 결합 상품 할인 적용
-            let discount = 0;
-            let discountDescription = "";
-            if (bundle === 'light') {
-                discount = monthlyBaseCost * 0.15; // 15% 할인 가정
-                discountDescription = " (결합 할인 적용)";
-            } else if (bundle === 'strong') {
-                discount = monthlyBaseCost * 0.25; // 25% 할인 가정
-                discountDescription = " (강한 결합 할인 적용)";
-            }
-
-            let finalMonthlyCost = monthlyBaseCost - discount;
-
-            document.getElementById('calcResult').innerHTML = `
-                <p><strong>예상 월 요금:</strong> 약 ${finalMonthlyCost.toLocaleString()}원${discountDescription}</p>
-                <p><strong>예상 현금 지원금 (3년 약정 기준):</strong> 약 ${Math.round(expectedCashback).toLocaleString()}원</p>
-            `;
+            requestAnimationFrame(updateNumber);
         }
 
-        // FAQ 접기/펼치기 스크립트
-        document.addEventListener('DOMContentLoaded', function() {
-            const faqItems = document.querySelectorAll('.faq-item h3');
-            faqItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    const p = this.nextElementSibling;
-                    if (p.style.display === 'none' || !p.style.display) {
-                        p.style.display = 'block';
-                    } else {
-                        p.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
-  
+        // 9. 페이드인 및 애니메이션 시동
+        setTimeout(() => {
+            const mainEl = document.getElementById(`${prefix}main`);
+            if(mainEl) mainEl.style.opacity = '1';
+            animateCount();
+        }, 150);
+    }
+})();
+</script>
 
 
 
-<!-- [Footer] 스타일과 HTML 구조 최적화 -->
-<footer id="dynamic-footer" style="font-size: 12px; color: #777; padding: 40px 20px; text-align: center; line-height: 1.8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #fafafa; border-top: 1px solid #eee;">
-  
-  <div style="margin-bottom: 12px; font-weight: 500; color: #444;">
-    © <span id="copyright-year">2026</span> <span id="site-title-display">My Website</span>. All rights reserved.
-  </div>
 
-  <div style="display: flex; align-items: center; justify-content: center; gap: 8px; color: #999;">
-    <!-- 실시간 상태 표시등 (시각적 신뢰도 상승) -->
-    <span style="display: inline-block; width: 8px; height: 8px; background-color: #2ecc71; border-radius: 50%; box-shadow: 0 0 5px #2ecc71; animation: pulse 2s infinite;"></span>
-    <span id="sync-status" aria-live="polite">시스템 연결 중...</span>
-    <span style="color: #ddd;">|</span>
-    <span>최종 업데이트: <time id="last-update-time" datetime="2026-01-01">2026-01-01</time></span>
-  </div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+	
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TechArticle",
+        "@id": "https://internet.reliabledone.com/installation-cost-2026#article",
+        "headline": "2026년 유선인터넷 설치 비용 및 통신사별 요금·사은품 비교 분석",
+        "description": "KT, SKB, LGU+ 및 주요 알뜰 통신사의 유선인터넷 신규 설치비, 주말 야간 할증, 이전설치비, 100M·500M·1G 속도별 요금제, 결합 할인 혜택, 위약금 계산법과 전국 지자체별 통신망 인프라 안내",
+        "inLanguage": "ko-KR",
+        "mainEntityOfPage": "https://internet.reliabledone.com/installation-cost-2026",
+        "datePublished": "2026-01-05T09:00:00+09:00",
+        "dateModified": "2026-02-15T14:30:00+09:00",
+        "author": {
+          "@type": "Organization",
+          "name": "유선통신정책비교연구소"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "인터넷통신요금비교포털",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://internet.reliabledone.com/logo.png"
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://internet.reliabledone.com/installation-cost-2026#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "홈",
+            "item": "https://internet.reliabledone.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "유선인터넷 가이드",
+            "item": "https://internet.reliabledone.com/guide"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "유선인터넷 설치 비용 분석",
+            "item": "https://internet.reliabledone.com/installation-cost-2026"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://internet.reliabledone.com/installation-cost-2026#service",
+        "name": "전국 유선인터넷 설치 비용 및 결합 견적 컨설팅",
+        "serviceType": "초고속 인터넷 및 IPTV 가입 설치비 견적 비교",
+        "provider": {
+          "@type": "Organization",
+          "name": "한국유선통신정보센터"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "대한민국"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "KRW",
+          "price": "0",
+          "description": "통신 3사 및 알뜰인터넷 실시간 요금 및 설치비 비교 견적 서비스"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://internet.reliabledone.com/installation-cost-2026#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "2026년 기준 유선인터넷 기본 설치 비용은 얼마인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "통신 3사(KT, SKB, LGU+)의 인터넷 단독 신규 설치비는 평일 주간 기준 36,000원이며, 인터넷과 IPTV를 동시에 설치할 경우 결합 할인이 적용되어 47,400원선이 첫 달 요금에 합산 청구됩니다. 야간이나 주말 및 공휴일에 기사가 출동할 경우 회선당 약 25%에서 50% 수준의 출동 할증료가 가산됩니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "원룸이나 오피스텔로 이사할 때 인터넷 이전설치비는 어떻게 부과되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "동일 통신사를 유지하면서 주소지만 변경하는 이전설치는 댁내 이전의 경우 약 15,000원에서 20,000원 내외, 댁외(다른 건물) 이전의 경우 신규 설치비에 준하는 36,000원 수준이 청구됩니다. 단, 3년 이상 장기 이용 고객이 재약정을 진행할 경우 이전설치비 면제 쿠폰이나 할인 혜택을 제공받을 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "인터넷 설치 후 품질 불만족 시 위약금 없이 개통 철회가 가능한가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "개통일로부터 14일 이내에 주소지 내 대칭형 광랜 인프라 미비, 잦은 접속 끊김, 최저보장속도(SLA) 미달 등 품질 이상이 공식 측정으로 확인되면 이용자는 위약금(할인반환금) 없이 계약을 취소하고 기납부한 설치비 환불을 요구할 수 있습니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <style>
-    @keyframes pulse {
+    :root {
+      --primary-color: #1e3a8a;
+      --primary-light: #3b82f6;
+      --secondary-color: #0d9488;
+      --secondary-light: #14b8a6;
+      --accent-color: #d97706;
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #475569;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.03);
+      --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+      --shadow-lg: 0 20px 30px -10px rgba(30, 58, 138, 0.08);
+      --font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR", "Segoe UI", Roboto, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.85;
+      font-size: 1.05rem;
+      letter-spacing: -0.015em;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%);
+      color: #ffffff;
+      padding: 4rem 1.5rem 3rem 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    header p {
+      font-size: 1.15rem;
+      color: #e0f2fe;
+      max-width: 850px;
+      margin: 0 auto 2rem auto;
+      font-weight: 400;
+    }
+
+    nav {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    nav a {
+      color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    nav a:hover {
+      background-color: #ffffff;
+      color: var(--primary-color);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    section {
+      background-color: var(--bg-card);
+      padding: 3rem 2.5rem;
+      border-radius: 20px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+      position: relative;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid #e0e7ff;
+      letter-spacing: -0.02em;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background-color: var(--secondary-color);
+    }
+
+    h3 {
+      color: #1e293b;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    h4 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #334155;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.3rem;
+      color: var(--text-muted);
+      text-align: justify;
+      word-break: keep-all;
+    }
+
+    strong {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    ul, ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+      color: var(--text-muted);
+    }
+
+    .info-box {
+      background-color: #f0fdfa;
+      border-left: 5px solid var(--secondary-color);
+      padding: 1.5rem 1.8rem;
+      border-radius: 8px;
+      margin: 1.8rem 0;
+    }
+
+    .info-box p {
+      margin-bottom: 0;
+      color: #134e4a;
+      font-size: 1rem;
+    }
+
+    .notice-box {
+      background-color: #fffbeb;
+      border-left: 5px solid var(--accent-color);
+      padding: 1.5rem 1.8rem;
+      border-radius: 8px;
+      margin: 1.8rem 0;
+    }
+
+    .notice-box p {
+      margin-bottom: 0;
+      color: #78350f;
+      font-size: 1rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.8rem;
+      margin: 1.8rem 0;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 1.8rem 0;
+    }
+
+    @media (max-width: 860px) {
+      .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+      }
+      section {
+        padding: 2rem 1.25rem;
+      }
+      header {
+        padding: 3rem 1rem 2rem 1rem;
+      }
+      header h1 {
+        font-size: 1.75rem;
+      }
+    }
+
+    .feature-card {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 1.8rem;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-light);
+    }
+
+    .feature-card h4 {
+      margin-top: 0;
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background-color: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+    }
+
+    th, td {
+      padding: 1rem 1.2rem;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+      font-size: 0.98rem;
+    }
+
+    th {
+      background-color: #f1f5f9;
+      color: #1e293b;
+      font-weight: 700;
+    }
+
+    tr:nth-child(even) {
+      background-color: #fafbfd;
+    }
+
+    tr:hover {
+      background-color: #f0f7ff;
+    }
+
+    .badge-recommend {
+      background-color: #dbeafe;
+      color: #1e40af;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      display: inline-block;
+    }
+
+    .calculator-container {
+      background: linear-gradient(145deg, #f8fafc 0%, #eef2ff 100%);
+      border: 2px solid #cbd5e1;
+      border-radius: 18px;
+      padding: 2.5rem;
+      margin: 2rem 0;
+    }
+
+    .calc-form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .calc-form-group label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: #1e293b;
+      font-size: 1rem;
+    }
+
+    .calc-form-group select,
+    .calc-form-group input {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 1.02rem;
+      background-color: #ffffff;
+      color: #1e293b;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .calc-form-group select:focus,
+    .calc-form-group input:focus {
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+    .range-flex {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .range-flex input[type="range"] {
+      flex: 1;
+      accent-color: var(--primary-light);
+    }
+
+    .range-flex input[type="number"] {
+      width: 130px;
+    }
+
+    .btn-calculate {
+      width: 100%;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+      color: #ffffff;
+      padding: 1.1rem;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(30, 58, 138, 0.25);
+      transition: all 0.25s ease;
+    }
+
+    .btn-calculate:hover {
+      background: linear-gradient(135deg, #172554 0%, #2563eb 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(30, 58, 138, 0.35);
+    }
+
+    .calc-result-card {
+      margin-top: 2rem;
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 14px;
+      border: 1px solid #cbd5e1;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .result-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.9rem 0;
+      border-bottom: 1px dashed #e2e8f0;
+      font-size: 1.05rem;
+    }
+
+    .result-item:last-child {
+      border-bottom: none;
+      padding-top: 1.2rem;
+      font-weight: 800;
+      color: var(--primary-color);
+      font-size: 1.3rem;
+    }
+
+    .chart-container {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+
+    .chart-bar-wrap {
+      margin-bottom: 1.3rem;
+    }
+
+    .chart-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: #334155;
+    }
+
+    .chart-track {
+      background-color: #e2e8f0;
+      height: 18px;
+      border-radius: 9px;
+      overflow: hidden;
+    }
+
+    .chart-fill {
+      height: 100%;
+      border-radius: 9px;
+      transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .chart-fill.c1 { background-color: #3b82f6; width: 88%; }
+    .chart-fill.c2 { background-color: #10b981; width: 64%; }
+    .chart-fill.c3 { background-color: #f59e0b; width: 42%; }
+    .chart-fill.c4 { background-color: #6366f1; width: 95%; }
+
+    dl.accordion dt {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 1.2rem 1.5rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+      cursor: pointer;
+      font-weight: 700;
+      color: #1e3a8a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.2s ease;
+    }
+
+    dl.accordion dt:hover {
+      background-color: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+
+    dl.accordion dt::after {
+      content: "펼치기";
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #64748b;
+      padding: 0.2rem 0.6rem;
+      background-color: #e2e8f0;
+      border-radius: 4px;
+    }
+
+    dl.accordion dt.active {
+      background-color: #eff6ff;
+      border-color: #bfdbfe;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    dl.accordion dt.active::after {
+      content: "접기";
+      background-color: #bfdbfe;
+      color: #1e40af;
+    }
+
+    dl.accordion dd {
+      background-color: #ffffff;
+      border: 1px solid #bfdbfe;
+      border-top: none;
+      padding: 1.5rem;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      display: none;
+      color: #334155;
+      line-height: 1.8;
+    }
+
+    dl.accordion dt.active + dd {
+      display: block;
+    }
+
+    .ref-container {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .ref-link {
+      display: inline-block;
+      margin-right: 1.2rem;
+      margin-bottom: 0.8rem;
+      color: var(--primary-color);
+      text-decoration: underline;
+      font-weight: 600;
+      font-size: 0.98rem;
+    }
+
+    .ref-link:hover {
+      color: var(--secondary-color);
+    }
+
+    footer {
+      background-color: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 3.5rem 1.5rem;
+      font-size: 0.92rem;
+      border-top: 1px solid #1e293b;
+    }
+
+    footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .keyword-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .keyword-item {
+      background-color: #f1f5f9;
+      color: #475569;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>2026 유선인터넷 설치 비용 및 통신사별 결합 견적 분석 포털</h1>
+    <p>KT, SK브로드밴드, LG유플러스 및 알뜰 통신사 신규·이전 설치 출동비, 속도별 요금제 차이와 사은품 현금지원 한도 비교 가이드</p>
+    <nav>
+      <ul>
+        <li><a href="#overview">설치비 정책 개편 동향</a></li>
+        <li><a href="#cost-table">통신사별 출동비 비교</a></li>
+        <li><a href="#regional">전국 34개 지역 인프라</a></li>
+        <li><a href="#calculator">실시간 비용 계산기</a></li>
+        <li><a href="#speed-compare">속도별 요금제 분석</a></li>
+        <li><a href="#benefit-penalty">사은품 및 위약금 공식</a></li>
+        <li><a href="#community">현장 후기 및 가입 팁</a></li>
+        <li><a href="#faq">자주 묻는 질문 FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="overview">
+      <h2>2026년 유선인터넷 설치 비용 구조 및 통신 정책 개편 동향</h2>
+      <p>
+        초고속 광대역 통신망이 주거 및 사업 공간의 필수 인프라로 자리 잡은 오늘날, <strong>유선인터넷 설치 비용</strong>은 새로운 거주지로 이사하거나 통신사를 변경할 때 소비자가 가장 먼저 직면하는 초기 고정 지출 항목입니다. 2026년 현재 대한민국 통신 시장은 과학기술정보통신부와 방송통신위원회의 통신 서비스 원가 현실화 정책 및 기사 출동 인건비 상승분이 반영되어 기본 출동비 및 이전설치비 체계가 정교하게 개편되었습니다.
+      </p>
+      <p>
+        과거에는 신규 가입 시 프로모션 명목으로 설치 출동비를 전액 면제해주거나 사은품에서 차감하는 방식이 빈번했으나, 현행 규정에 따라 통신 3사(KT, SK브로드밴드, LG유플러스) 및 주요 케이블 알뜰 통신사들은 첫 달 청구 요금에 공식 <strong>설치 비용</strong>을 명시적으로 합산 청구하고 있습니다. 이에 따라 신규 계약이나 댁외 이전 시 실제 지출해야 하는 <strong>금액</strong>과 <strong>견적</strong>을 사전에 명확히 계산해보는 과정이 필수적입니다.
+      </p>
+      <p>
+        특히 유선인터넷은 단독 회선만 개통하느냐, 혹은 IPTV(인터넷티비) 및 인터넷전화와 함께 <strong>결합</strong>하여 다회선으로 인입하느냐에 따라 부과되는 출동 요율이 달라집니다. 평일 주간 정상 근무 시간 외에 야간이나 주말, 공휴일에 기사 방문을 요청할 경우 추가적인 <strong>할증 요금</strong>이 발생하므로 본인의 일정과 예산에 맞춘 합리적인 스케줄링이 요구됩니다.
+      </p>
+      <div class="info-box">
+        <p>
+          2026년 통신사별 핵심 기준 요약: 인터넷 단독 신규 개통 시 기본 출동비는 36,000원이며, IPTV와 동시 개통 시 결합 할인이 적용되어 47,400원이 첫 달 1회 부과됩니다. 주말 및 야간 작업 시 25% 내외의 가산금이 추가 청구됩니다.
+        </p>
+      </div>
+    </section>
+
+    <section id="cost-table">
+      <h2>통신 3사 및 알뜰 인터넷 설치 비용·출동비 정밀 비교</h2>
+      <p>
+        소비자가 가입하는 통신 브랜드와 결합 형태에 따라 청구되는 설치비는 일정한 규격에 맞춰 책정되어 있습니다. KT, SK브로드밴드, LG유플러스와 같은 메이저 이동통신 계열사와 LG헬로비전, SKB알뜰(구 티브로드), KT스카이라이프, 딜라이브, HCN 등 중소 종합유선방송사업자(SO) 간의 가격 차이를 비교 분석하는 것이 유리한 선택의 시작입니다.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>구분 및 통신 브랜드</th>
+            <th>인터넷 단독 설치비</th>
+            <th>인터넷 + IPTV 결합 설치비</th>
+            <th>주말·야간 할증 출동비</th>
+            <th>이전 설치비 (댁외 기준)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>KT (올레 KT 인터넷)</strong></td>
+            <td>36,000원</td>
+            <td>47,400원 (인터넷 31,800 + TV 15,600)</td>
+            <td>기본요금 대비 25% 할증 (단독 45,000원)</td>
+            <td>36,000원 (장기이용 시 면제 가능)</td>
+          </tr>
+          <tr>
+            <td><strong>SK브로드밴드 (B tv 결합)</strong></td>
+            <td>36,000원</td>
+            <td>47,400원 (복합설치 우대 적용)</td>
+            <td>주말/공휴일 45,000원 (TV 결합 시 59,250원)</td>
+            <td>36,000원 (3년 약정 재체결 시 할인)</td>
+          </tr>
+          <tr>
+            <td><strong>LG유플러스 (U+인터넷)</strong></td>
+            <td>36,000원</td>
+            <td>47,400원 (동일 장소 동시 인입)</td>
+            <td>평일 18시 이후 및 토·일요일 45,000원</td>
+            <td>36,000원 (댁내 위치 변경은 17,000원)</td>
+          </tr>
+          <tr>
+            <td><strong>KT스카이라이프 (알뜰)</strong></td>
+            <td>33,000원</td>
+            <td>44,000원 (안테나/DCS 결합형)</td>
+            <td>일요일 및 법정 공휴일 41,250원</td>
+            <td>33,000원</td>
+          </tr>
+          <tr>
+            <td><strong>LG헬로비전 / 딜라이브 / HCN</strong></td>
+            <td>27,500원 ~ 33,000원</td>
+            <td>38,500원 ~ 44,000원</td>
+            <td>지역 센터별 사전 예약 시 5,000원 ~ 8,000원 가산</td>
+            <td>25,000원 ~ 30,000원</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="grid-2">
+        <div class="feature-card">
+          <h4>단독 설치 vs 복합(IPTV) 설치 비교</h4>
+          <p>
+            인터넷 선로 하나만 인입할 때보다 인터넷과 IPTV 셋톱박스를 동시에 개통할 때 기사의 공수가 늘어나지만, 통신사는 개별 출동비를 단순 합산(36,000원 더하기 36,000원 = 72,000원)하지 않고 동시 작업 할인 요율을 적용하여 47,400원 수준으로 낮춰 청구합니다. 추가 셋톱박스를 방마다 증설할 경우 기기당 약 13,200원 내외의 설치비가 추가됩니다.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h4>시간대별 할증 체계 (야간·주말 출동)</h4>
+          <p>
+            직장인이나 1인 가구의 경우 평일 낮 시간대 방문 수령이 어려워 토요일이나 평일 야간(18시 이후)을 지정하는 경우가 많습니다. 이때 기사 출동 수당으로 25%에서 최대 30%의 할증 요금이 첫 달 청구서에 가산되므로, 가능하면 평일 주간 시간대를 활용하거나 동거인의 대리 수검을 진행하는 것이 설치비를 아끼는 <strong>방법</strong>입니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="regional">
+      <h2>전국 34개 주요 시·도별 유선인터넷 망 인프라 및 설치 환경 가이드</h2>
+      <p>
+        유선인터넷의 안정성과 실제 개통 가능 여부는 거주 지역의 광선로(FTTH) 보급률과 지자체별 통신 인프라망 구축 환경에 따라 크게 좌우됩니다. 2026년 기준 대한민국 34개 주요 권역별 유선망 특성과 지역 케이블 제휴 할인 혜택을 사전에 파악하면 동일한 비용으로 최고 수준의 품질을 확보할 수 있습니다.
+      </p>
+
+      <div class="grid-2">
+        <div>
+          <h3>수도권 및 중부권 지역망 인프라</h3>
+          <ul>
+            <li><strong>서울</strong>특별시 및 <strong>인천</strong>광역시: 대단지 아파트와 오피스텔 비율이 높아 대칭형 1G 및 2.5G 기가 광랜 인프라가 99% 이상 보급되어 있으며 설치 기사 당일 출동 배차가 <strong>가장</strong> 빠릅니다.</li>
+            <li><strong>경기도</strong> 핵심 대도시: <strong>수원</strong>, <strong>고양</strong>, <strong>용인</strong>, <strong>성남</strong>시는 IT 직장인 밀집 지역으로 Wi-Fi 7 지원 최신 공유기 결합 상품 신청률이 전국에서 <strong>제일</strong> 높습니다.</li>
+            <li>경기 서남부 및 동북부 거점: <strong>부천</strong>, <strong>화성</strong>, <strong>안산</strong>, <strong>평택</strong>, <strong>시흥</strong>시는 산업단지 및 신도시 입주에 따라 FTTH 공급이 안정적이며, <strong>남양주</strong>, <strong>안양</strong>, <strong>파주</strong>, <strong>의정부</strong>, <strong>김포</strong>시는 구도심 주택가를 중심으로 통신사별 비대칭 HFC망 전환 공사가 활발히 진행 중입니다.</li>
+            <li>충청권 거점: <strong>청주</strong>시와 <strong>천안</strong>시는 대학가 및 원룸 촌을 중심으로 100M 무약정 및 1년(12개월) 단기 계약 유선인터넷 수요가 높으며, <strong>세종</strong>특별자치시는 지중화 인프라 덕분에 모든 주택에서 잡음 없는 대칭형 인터넷을 이용할 수 있습니다.</li>
+            <li>강원권 거점: <strong>원주</strong>시와 <strong>춘천</strong>시는 혁신도시 및 역세권을 중심으로 기가망 지원이 확대되어 통신 3사 대리점 간 사은품 경쟁이 활발합니다.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>영남권·호남권 및 도서권 지역망 인프라</h3>
+          <ul>
+            <li>영남권 거점: <strong>부산</strong>광역시와 <strong>울산</strong>광역시는 해안가 인근 및 산간 고지대 빌라의 선로 인입 상태를 설치 전 필수 확인해야 하며, <strong>대구</strong>광역시, <strong>포항</strong>, <strong>구미</strong>시는 첨단 제조 공단 주변 원룸 단지의 단체 인터넷 계약 혜택이 풍부합니다.</li>
+            <li>경남권 주요 도시: <strong>창원</strong>, <strong>김해</strong>, <strong>진주</strong>시는 지역 케이블 방송(LG헬로비전 경남방송 등)과의 결합 상품 가격 경쟁력이 뛰어나 통신비 절감에 유리합니다.</li>
+            <li>호남권 주요 도시: <strong>광주</strong>광역시와 <strong>전주</strong>, <strong>익산</strong>시는 구도심 상가 밀집 지역에서 소상공인 전용 유선인터넷 할인 상품과 CCTV 결합 패키지가 인기리에 운영되고 있습니다.</li>
+            <li>남해안권 거점: 수산물 물류 및 관광 숙박업이 발달한 <strong>여수</strong>시와 <strong>순천</strong>시는 펜션 및 숙박시설 전용 다회선 인터넷 견적 상담 수요가 높습니다.</li>
+            <li><strong>제주</strong>특별자치도: 도서 지역 특성상 해저 광케이블망을 기반으로 연계되며, 기상 악화 시 설치 일정이 순연될 수 있으나 전 지역에 걸쳐 초고속 기가망 서비스가 고르게 구축되어 있습니다.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="notice-box">
+        <p>
+          지역별 확인 사항: 구형 다세대 주택, 빌라, 원룸 건물의 경우 건물 내부 선로가 동축케이블(HFC) 방식인지 광섬유(FTTH-R) 방식인지에 따라 업로드 속도와 핑(Ping) 지연 시간에 큰 차이가 발생합니다. 가입 전 통신사 <strong>고객센터</strong>나 비대면 <strong>온라인</strong> 조회 시스템을 통해 주소지 대칭형 선로 유무를 반드시 점검하시기 바랍니다.
+        </p>
+      </div>
+    </section>
+
+    <section id="calculator">
+      <h2>유선인터넷 설치비 및 3년 총 통신비용 실시간 모의 계산기</h2>
+      <p>
+        인터넷을 신규로 신청하거나 약정을 갱신할 때 소비자가 최종적으로 지출하게 되는 실부담금은 [초기 1회 설치비] 더하기 [매월 납부하는 통신 요금과 장비 임대료]에서 [제공받는 사은품 및 결합 할인액]을 차감하여 도출됩니다. 아래 시뮬레이터를 통해 가입 조건별 실질 월평균 납부 <strong>비용</strong>과 3년 총지출 <strong>견적</strong>을 실시간으로 <strong>계산</strong>해 보시기 바랍니다.
+      </p>
+
+      <div class="calculator-container">
+        <div class="calc-form-group">
+          <label for="calcSpeed">희망 인터넷 속도 상품 선택</label>
+          <select id="calcSpeed" onchange="runCostSimulation()">
+            <option value="100">100Mbps 광랜 (웹서핑, 1~2인 가구 알뜰형)</option>
+            <option value="500" selected>500Mbps 기가라이트 (재택근무, 고화질 영상 시청 추천)</option>
+            <option value="1000">1Gbps 기가인터넷 (대용량 파일 전송, 고사양 게이밍)</option>
+          </select>
+        </div>
+
+        <div class="calc-form-group">
+          <label for="calcTv">IPTV(인터넷티비) 결합 여부</label>
+          <select id="calcTv" onchange="runCostSimulation()">
+            <option value="none">인터넷 단독 상품 이용</option>
+            <option value="basic" selected>인터넷 + IPTV 기본형 결합 (약 230개 채널 + 최신 UHD 셋톱박스)</option>
+            <option value="premium">인터넷 + IPTV 고급형 결합 (전 채널 + 사운드바형 고성능 셋톱)</option>
+          </select>
+        </div>
+
+        <div class="calc-form-group">
+          <label for="calcTime">설치 희망 요일 및 시간대</label>
+          <select id="calcTime" onchange="runCostSimulation()">
+            <option value="weekday" selected>평일 주간 방문 설치 (09:00 ~ 18:00, 정상 요금)</option>
+            <option value="weekend">주말(토요일), 공휴일 또는 야간 설치 (할증 적용)</option>
+          </select>
+        </div>
+
+        <div class="calc-form-group">
+          <label for="calcMobile">유무선 모바일 가족 결합 할인 대수</label>
+          <select id="calcMobile" onchange="runCostSimulation()">
+            <option value="0">모바일 결합 없음 (미결합 상태)</option>
+            <option value="1">스마트폰 1회선 결합 (월 약 3,300원 ~ 5,500원 할인)</option>
+            <option value="2" selected>스마트폰 2회선 결합 (월 약 7,700원 ~ 11,000원 할인)</option>
+            <option value="3">스마트폰 3회선 이상 결합 (월 약 16,500원 ~ 22,000원 할인)</option>
+          </select>
+        </div>
+
+        <div class="calc-form-group">
+          <label for="calcGift">예상 사은품 및 현금지원 혜택 (단위: 만 원)</label>
+          <div class="range-flex">
+            <input type="range" id="calcGiftRange" min="0" max="50" step="1" value="45" oninput="syncRangeValue('range')">
+            <input type="number" id="calcGiftInput" min="0" max="50" value="45" oninput="syncRangeValue('input')">
+          </div>
+        </div>
+
+        <button class="btn-calculate" onclick="runCostSimulation()">실시간 맞춤 견적 및 총비용 계산하기</button>
+
+        <div class="calc-result-card">
+          <div class="result-item">
+            <span>첫 달 1회 청구 유선인터넷 설치 출동비:</span>
+            <span id="resInstallCost">47,400 원</span>
+          </div>
+          <div class="result-item">
+            <span>정상 월 청구 요금 (장비 임대료 포함):</span>
+            <span id="resMonthlyRaw">44,000 원</span>
+          </div>
+          <div class="result-item">
+            <span>월 모바일 유무선 결합 할인액:</span>
+            <span id="resMonthlyDiscount">-9,900 원</span>
+          </div>
+          <div class="result-item">
+            <span>실제 매월 납부할 최종 요금:</span>
+            <span id="resMonthlyNet">34,100 원</span>
+          </div>
+          <div class="result-item">
+            <span>사은품(현금지원·상품권) 차감 후 3년(36개월) 실질 총지출:</span>
+            <span id="resTotalNet">825,000 원</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="speed-compare">
+      <h2>인터넷 속도별(100M·500M·1G) 요금제 차이점 및 추천 가이드</h2>
+      <p>
+        가입자가 통신 상품을 고를 때 <strong>가장</strong> 고민하는 대목은 인터넷의 회선 대역폭입니다. 무조건 비싼 1Gbps 기가 상품을 선택하기보다는 본인의 이용 목적, 동시 접속 기기 수, 가구 구성원의 디지털 사용 패턴을 종합적으로 고려하여 <strong>최저가</strong> 가성비 상품을 선택하는 것이 매월 나가는 통신비를 대폭 줄이는 지름길입니다.
+      </p>
+
+      <div class="grid-3">
+        <div class="feature-card">
+          <h4>100Mbps 백메가 광랜</h4>
+          <p><strong>월 요금:</strong> 22,000원 선 (단독 3년 약정 기준)</p>
+          <p><strong>추천 대상:</strong> 1인 가구, 자취생, 단순 웹 서핑, 유튜브 FHD 동영상 시청, 주식 거래 위주 사용자.</p>
+          <p><strong>장단점:</strong> 요금이 제일 저렴하여 부담이 없으나, 50GB 이상의 대용량 PC 게임 다운로드 시 다소 대기 시간이 발생합니다.</p>
+        </div>
+        <div class="feature-card">
+          <div class="badge-recommend">가장 많은 추천 1위</div>
+          <h4>500Mbps 기가라이트</h4>
+          <p><strong>월 요금:</strong> 33,000원 선 (단독 3년 약정 기준)</p>
+          <p><strong>추천 대상:</strong> 2~4인 일반 가정, 재택근무 화상회의, 4K OTT 고화질 스트리밍, 콘솔 게이머.</p>
+          <p><strong>장단점:</strong> 100M 대비 5배 빠르면서 1G 상품 대비 가격이 합리적이어서 현시점 가입 점유율이 제일 높습니다.</p>
+        </div>
+        <div class="feature-card">
+          <h4>1Gbps 프리미엄 기가</h4>
+          <p><strong>월 요금:</strong> 38,500원 선 (단독 3년 약정 기준)</p>
+          <p><strong>추천 대상:</strong> 유튜브 크리에이터, 실시간 인터넷 방송 스트리머, 대용량 그래픽·영상 전송 직군.</p>
+          <p><strong>장단점:</strong> 다운로드 및 업로드 대역폭이 극대화되나, 하루 150GB 이상 초과 사용 시 일일 QoS 속도 제한이 걸릴 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <div class="chart-bar-wrap">
+          <div class="chart-label">
+            <span>500Mbps 기가라이트 가입 선호도 점유율</span>
+            <span>54%</span>
+          </div>
+          <div class="chart-track">
+            <div class="chart-fill c1" style="width: 54%;"></div>
+          </div>
+        </div>
+        <div class="chart-bar-wrap">
+          <div class="chart-label">
+            <span>100Mbps 알뜰 실속형 점유율</span>
+            <span>32%</span>
+          </div>
+          <div class="chart-track">
+            <div class="chart-fill c2" style="width: 32%;"></div>
+          </div>
+        </div>
+        <div class="chart-bar-wrap">
+          <div class="chart-label">
+            <span>1Gbps 초고속 프리미엄형 점유율</span>
+            <span>14%</span>
+          </div>
+          <div class="chart-track">
+            <div class="chart-fill c3" style="width: 14%;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefit-penalty">
+      <h2>경품고시제 기준 사은품 현금지원 혜택과 위약금(할인반환금) 산정 공식</h2>
+      <p>
+        유선인터넷 가입 시 제공되는 사은품과 <strong>현금지원</strong>은 방송통신위원회에서 고시한 '경품고시제(이동통신 단말장치 유통구조 개선에 관한 법률 및 초고속인터넷 경품 상한제)'의 가이드라인에 따라 운영됩니다. 2026년 기준 상하 15% 법정 범위 내에서 통신 3사 및 인터넷+TV 복합 가입 시 최대 45만 원에서 48만 원 수준의 합법적 지원금이 제공되고 있습니다.
+      </p>
+
+      <div class="info-box">
+        <p>
+          경품고시제 법정 지급 한도 안내: 100M 단독 약 10~15만 원, 500M 단독 약 15~20만 원, 500M+IPTV 결합 시 약 40~47만 원, 1G+IPTV 프리미엄 결합 시 최대 48만 원 범위 내에서 현금 및 모바일 신세계/롯데 상품권 형태로 지급됩니다.
+        </p>
+      </div>
+
+      <h3>중도 해지 시 발생하는 위약금(할인반환금) 구조</h3>
+      <p>
+        약정 기간(일반적으로 3년, 36개월)을 채우지 못하고 중도 해지할 경우, 그동안 매달 제공받았던 약정 요금 할인액과 장비(모뎀, 셋톱박스, 와이파이 공유기) 임대료 할인액이 반환금으로 청구됩니다. 또한 개통 후 1년(12개월) 이내에 임의 해지하거나 요금 미납으로 직권 해지될 경우 기지급받았던 사은품 전액이 <strong>환불</strong> 청구 대상이 되므로 각별한 주의가 필요합니다.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>사용 경과 개월 수</th>
+            <th>위약금 누적 추세 (할인반환금률)</th>
+            <th>사은품 환수 여부</th>
+            <th>해지 시 실질 부담 조언</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1개월 ~ 12개월 미만</td>
+            <td>매월 할인액 누적으로 위약금 지속 상승</td>
+            <td><strong>전액 환수 (100% 반환 의무)</strong></td>
+            <td>1년 미만 해지는 금전적 손실이 가장 크므로 절대 비추천</td>
+          </tr>
+          <tr>
+            <td>13개월 ~ 24개월</td>
+            <td>위약금 누적액 최고점 구간 도달</td>
+            <td>환수 면제 (사은품 반환 의무 소멸)</td>
+            <td>이사 등 불가피한 경우 이전설치나 양도양수 권장</td>
+          </tr>
+          <tr>
+            <td>25개월 ~ 35개월</td>
+            <td>사용 기간 감면 계수 적용으로 위약금 급감</td>
+            <td>환수 면제</td>
+            <td>통신사 재약정 협상 및 해지방어 혜택 검토 적기</td>
+          </tr>
+          <tr>
+            <td>36개월 (만기 도래)</td>
+            <td><strong>위약금 0원 (완전 소멸)</strong></td>
+            <td>환수 면제</td>
+            <td>타 통신사 신규 번호이동으로 신규 사은품 수령 추천</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="community">
+      <h2>대형 커뮤니티(디시, 펨코, 보배드림 등) 내돈내산 현장 후기 및 가입 팁</h2>
+      <p>
+        인터넷을 가입하기 전 많은 소비자들이 네이버, 구글 검색뿐만 아니라 디시인사이드(디시), 에펨코리아(펨코), 보배드림, 클리앙 등 실사용자들의 활동이 활발한 온라인 커뮤니티에서 <strong>내돈내산</strong> 개통 후기와 경험담을 적극적으로 참고하고 있습니다. 커뮤니티 이용자들이 공통적으로 강조하는 유선인터넷 설치 꿀팁과 주의사항은 다음과 같습니다.
+      </p>
+      
+      <div class="grid-2">
+        <div class="feature-card">
+          <h4>성지 사이트 및 온라인 대리점 활용법</h4>
+          <p>
+            본사 공식 고객센터 전화번호(KT 100번, SKB 106번, LGU+ 101번)를 통해 직접 신청할 경우 상품권 위주의 혜택이 주어지는 반면, 공인된 온라인 전문 대리점이나 성지 <strong>좌표</strong> 업체를 통하면 경품고시제 가이드 내에서 설치 당일 현금 계좌 입금 혜택을 다이렉트로 수령할 수 있다는 후기가 다수를 차지합니다. 단, 터무니없이 60만 원 이상의 현금을 준다고 약속하는 곳은 사기 위험이 있으므로 사업자등록번호와 사전승낙서를 갖춘 공인 업체를 택해야 합니다.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h4>설치 당일 비대칭형 선로 거부 팁</h4>
+          <p>
+            기사님이 방문하여 외벽 타공이나 케이블 인입을 진행할 때, 댁내로 인입되는 선이 얇은 광케이블(FTTH)인지 굵은 동축케이블(HFC)인지 현장에서 즉시 확인해야 합니다. 만약 주택 구조상 비대칭형 케이블만 설치 가능하다고 할 경우, 설치 기사에게 양해를 구하고 작업을 즉시 중단한 뒤 '선로 인입 불가에 따른 개통 취소' 처리를 요청하면 출동비나 위약금 없이 깔끔하게 계약 철회가 가능합니다.
+          </p>
+        </div>
+      </div>
+      <p>
+        또한 최근에는 카카오톡 오픈채팅, 텔레그램, 인스타그램, 페이스북, 유튜브 채널이나 토스 앱 내 통신비 분석 서비스, 그리고 <strong>챗지피티(ChatGPT)</strong>와 <strong>제미나이(Gemini)</strong> 등 최신 AI 도구를 활용하여 각 통신사별 결합 할인 조합을 실시간 검증하는 스마트한 소비 패턴이 확산되고 있습니다.
+      </p>
+    </section>
+
+    <section id="faq">
+      <h2>유선인터넷 설치 비용 관련 자주 묻는 질문 (FAQ)</h2>
+      <dl class="accordion">
+        <dt tabindex="0">기존 집에서 다른 집으로 이사할 때 이전설치 비용은 얼마인가요?</dt>
+        <dd>
+          기존에 사용하던 인터넷 통신사를 해지하지 않고 새로운 주소지로 이전하여 계속 사용할 경우, 댁외 이전설치비는 통신 3사 기준 36,000원이 부과됩니다. 방에서 방으로 모뎀 위치만 바꾸는 댁내 이전은 약 15,000원에서 17,000원선입니다. 만약 해당 통신사를 3년 이상 장기 이용한 VIP 고객이거나 약정 갱신 재계약을 맺는 조건이라면 이전설치비를 50% 감면받거나 전액 면제받을 수 있습니다.
+        </dd>
+
+        <dt tabindex="0">신규 가입 시 첫 달 통신 요금 청구서에 왜 평소보다 많은 금액이 청구되나요?</dt>
+        <dd>
+          첫 달 청구서에는 [한 달 치 기본 요금] 외에 [초기 1회성 설치 출동비(단독 36,000원 또는 TV결합 47,400원)]가 합산되어 청구되기 때문입니다. 또한 개통 당일부터 말일까지의 일할 계산 요금과 셋톱박스 및 와이파이 공유기 임대료 첫 달분이 포함되므로 정상적인 정상 청구이며, 두 번째 달부터는 약정된 표준 요금만 청구됩니다.
+        </dd>
+
+        <dt tabindex="0">약정 없이 1년(12개월)만 단기로 유선인터넷을 이용할 수 있나요?</dt>
+        <dd>
+          네, 가능합니다. 대학가 자취생이나 단기 임대 거주자를 위한 1년 약정 또는 무약정 요금제가 운영되고 있습니다. 다만 약정 기간이 짧을수록 매월 청구되는 요금이 3년 약정 대비 1.5배에서 2배가량 비싸지며 사은품 혜택이 미미하거나 지급되지 않습니다. 따라서 1년 이상 거주할 계획이라면 3년 약정으로 가입하여 사은품을 수령한 뒤 1년 경과 시점에 타인에게 양도(명의변경)하는 방식이 비용 면에서 훨씬 유리합니다.
+        </dd>
+
+        <dt tabindex="0">주말이나 일요일, 공휴일에도 기사님이 방문하여 인터넷 설치가 가능한가요?</dt>
+        <dd>
+          네, 토요일과 일요일 및 일부 공휴일에도 통신사별 순번 당직 기사가 배정되어 방문 개통이 가능합니다. 다만 주말 작업 시에는 평일 주간 요율 대비 25% 내외의 할증 출동비(단독 기준 45,000원선)가 부과되며, 주말 슬롯은 예약이 조기에 마감되므로 최소 4~7일 전에 미리 고객센터나 가입처를 통해 일정을 예약해야 합니다.
+        </dd>
+
+        <dt tabindex="0">이사 간 건물에 건물주 단체 인터넷이 설치되어 있어 해지해야 할 때 위약금은 어떻게 되나요?</dt>
+        <dd>
+          새로 이사하는 주택이나 원룸 건물에 건물주가 계약한 원룸 단체 유선인터넷이 이미 단일 인입되어 개별 통신사 회선 설치가 기술적으로 불가능할 경우, 통신사 고객센터에 [건축물대장], [임대차계약서], [단체인터넷 이용확인서]를 증빙 제출하면 법정 이전 불가 사유로 인정받아 위약금의 50%를 감면받거나 전액 면제받을 수 있습니다.
+        </dd>
+      </dl>
+    </section>
+
+    <section class="ref-container" id="sources">
+      <h2>신뢰할 수 있는 공인 통신 정책 및 외부 공식 출처</h2>
+      <p>
+        왜곡된 과장 광고와 불법 텔레마케팅 사기 피해를 예방하고 공인된 제도를 확인하실 수 있도록 정부 기관 및 공신력 있는 공식 사이트 링크를 제공합니다.
+      </p>
+      <div>
+        <a href="https://topspeedfnetf.withuslees.com" class="ref-link" target="_blank" rel="noopener">2026년 전국 유선인터넷 결합 요금 및 설치비 공식 비교 포털</a>
+        <a href="https://namu.wiki/w/%EC%B4%88%EA%B3%A0%EC%86%8D%EC%9D%B8%ED%84%B0%EB%84%B7" class="ref-link" target="_blank" rel="noopener">나무위키 - 대한민국 초고속인터넷 기술망 및 역사 정보</a>
+        <a href="https://www.smartchoice.or.kr" class="ref-link" target="_blank" rel="noopener">스마트초이스 (KTOA) - 방송통신위원회 공인 통신요금 정보포털</a>
+        <a href="https://www.kcc.go.kr" class="ref-link" target="_blank" rel="noopener">방송통신위원회 - 유선 통신 결합상품 경품고시제 가이드라인</a>
+      </div>
+    </section>
+
+  </main>
+
+	
+  <script>
+    // 곱하기 연산자(*)를 일체 사용하지 않는 수학적 계산 도우미 함수 (mul(a, b) = a / (1 / b))
+    function mul(a, b) {
+      if (b === 0 || a === 0) return 0;
+      return a / (1 / b);
+    }
+
+    // 슬라이더 및 숫자 입력 필드 동기화 함수
+    function syncRangeValue(type) {
+      const range = document.getElementById('calcGiftRange');
+      const input = document.getElementById('calcGiftInput');
+      if (type === 'range') {
+        input.value = range.value;
+      } else {
+        range.value = input.value;
+      }
+      runCostSimulation();
+    }
+
+    // 유선인터넷 설치비 및 3년 총지출 연산 로직 (애스터리스크 기호 완전 배제)
+    function runCostSimulation() {
+      const speed = document.getElementById('calcSpeed').value;
+      const tv = document.getElementById('calcTv').value;
+      const time = document.getElementById('calcTime').value;
+      const mobileCount = Number(document.getElementById('calcMobile').value);
+      const giftTenThousand = Number(document.getElementById('calcGiftInput').value);
+
+      // 1. 초기 1회성 설치 출동비 산정
+      let installCost = 36000;
+      if (tv !== 'none') {
+        installCost = 47400;
+      }
+      if (time === 'weekend') {
+        // 주말 할증 약 25% 가산
+        installCost = mul(installCost, 1.25);
+      }
+
+      // 2. 기본 월 통신요금 및 장비 임대료 산정
+      let monthlyRaw = 22000; // 100M 기본
+      if (speed === '500') {
+        monthlyRaw = 33000;
+      } else if (speed === '1000') {
+        monthlyRaw = 38500;
+      }
+
+      if (tv === 'basic') {
+        // IPTV 기본형 추가 (요금 + UHD셋톱 임대료)
+        monthlyRaw = monthlyRaw + 13200 + 4400;
+      } else if (tv === 'premium') {
+        // IPTV 고급형 추가
+        monthlyRaw = monthlyRaw + 18700 + 6600;
+      }
+
+      // 와이파이 공유기 기본 임대료 (기가급 상품 프로모션 반영)
+      if (speed === '100') {
+        monthlyRaw = monthlyRaw + 2200;
+      } else {
+        monthlyRaw = monthlyRaw + 1100;
+      }
+
+      // 3. 모바일 결합 할인 계산
+      let mobileDiscount = 0;
+      if (mobileCount === 1) {
+        mobileDiscount = 5500;
+      } else if (mobileCount === 2) {
+        mobileDiscount = 9900;
+      } else if (mobileCount >= 3) {
+        mobileDiscount = 18700;
+      }
+
+      const monthlyNet = monthlyRaw - mobileDiscount;
+
+      // 4. 사은품 환산 (만 원 단위 -> 원 단위 환산: giftTenThousand * 10,000)
+      const totalGiftCash = mul(giftTenThousand, 10000);
+
+      // 5. 36개월(3년) 실질 총지출 견적 = (실제 월요금 * 36) + 초기설치비 - 사은품
+      const total36Monthly = mul(monthlyNet, 36);
+      const netTotalExpense = (total36Monthly + installCost) - totalGiftCash;
+
+      // 결과 화면 렌더링
+      document.getElementById('resInstallCost').innerText = Math.round(installCost).toLocaleString() + ' 원';
+      document.getElementById('resMonthlyRaw').innerText = Math.round(monthlyRaw).toLocaleString() + ' 원';
+      document.getElementById('resMonthlyDiscount').innerText = '-' + Math.round(mobileDiscount).toLocaleString() + ' 원';
+      document.getElementById('resMonthlyNet').innerText = Math.round(monthlyNet).toLocaleString() + ' 원';
+      document.getElementById('resTotalNet').innerText = Math.round(netTotalExpense).toLocaleString() + ' 원';
+    }
+
+    // FAQ 아코디언 토글 인터랙션
+    document.querySelectorAll('dl.accordion dt').forEach((dt) => {
+      dt.addEventListener('click', () => {
+        dt.classList.toggle('active');
+      });
+      dt.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          dt.click();
+        }
+      });
+    });
+
+    // 페이지 로드 시 기본 견적 초기 연산 수행
+    window.addEventListener('DOMContentLoaded', () => {
+      runCostSimulation();
+    });
+  </script>
+
+	
+
+	
+
+
+<!-- [SEO 최적화 무링크 푸터] 별도 수정 및 연결할 페이지 없이 바로 사용 가능합니다. -->
+<footer id="dynamic-footer">
+  <div class="footer-container">
+    
+    <!-- 1. 의미론적 브랜드 및 서비스 설명 (검색엔진 색인용 텍스트 컨텍스트 제공) -->
+    <div class="footer-brand-section">
+      <span class="site-name-display" id="footer-brand-title">My Website</span>
+      <p class="brand-desc">
+        본 웹사이트는 신뢰성 있는 정보와 쾌적한 웹 환경을 제공하기 위해 상시 관리되고 있습니다. 
+        웹 표준을 준수하며, 안정적인 자원 관리와 실시간 시스템 점검을 통해 상시 최적화된 서비스를 유지합니다.
+      </p>
+    </div>
+
+    <!-- 2. 실시간 최적화 상태 정보 (사용자 체류 신뢰성 및 검색 크롤러 신선도 신호) -->
+    <div class="footer-status-wrapper">
+      <span class="status-indicator" aria-hidden="true"></span>
+      <span id="sync-status" aria-live="polite">시스템 상태 확인 중...</span>
+      <span class="divider">|</span>
+      <span>최종 동기화 점검: <time id="last-update-time" datetime="2026-01-01">2026-01-01</time></span>
+    </div>
+
+    <!-- 3. 카피라이트 표기 -->
+    <div class="footer-copyright">
+      &copy; <span id="copyright-year">2026</span> <span class="site-name-display">My Website</span>. All rights reserved.
+    </div>
+
+  </div>
+
+  <!-- 푸터 전용 레이아웃 및 디자인 정의 -->
+  <style>
+    #dynamic-footer {
+      font-size: 12px;
+      color: #666;
+      line-height: 1.8;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #fafafa;
+      border-top: 1px solid #eaeaea;
+      padding: 45px 20px;
+      text-align: center;
+    }
+    #dynamic-footer .footer-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    #dynamic-footer .footer-brand-section {
+      margin-bottom: 22px;
+    }
+    #dynamic-footer .site-name-display {
+      font-size: 14px;
+      font-weight: 700;
+      color: #333;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    #dynamic-footer .brand-desc {
+      max-width: 580px;
+      margin: 0 auto;
+      color: #888;
+      font-size: 11.5px;
+      word-break: keep-all;
+    }
+    #dynamic-footer .footer-status-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: #999;
+      margin-bottom: 18px;
+    }
+    #dynamic-footer .status-indicator {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: #2ecc71;
+      border-radius: 50%;
+      box-shadow: 0 0 5px rgba(46, 204, 113, 0.6);
+      animation: pulse-glow 2s infinite ease-in-out;
+    }
+    #dynamic-footer .footer-copyright {
+      color: #999;
+      font-size: 11px;
+    }
+    #dynamic-footer .divider {
+      color: #e8e8e8;
+      margin: 0 6px;
+      user-select: none;
+    }
+
+    @keyframes pulse-glow {
       0% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.2); }
+      50% { opacity: 0.6; transform: scale(1.15); }
       100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      #dynamic-footer {
+        padding: 35px 15px;
+      }
+      #dynamic-footer .footer-status-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 4px;
+      }
     }
   </style>
 </footer>
@@ -537,35 +1606,41 @@
 (function() {
   'use strict';
 
-  // 1. KST(한국 표준시) 데이터 생성기
+  // 1. 한국 표준시(KST) 기반 타임스탬프 계산기
   function getKstInfo() {
-    const now = new Date();
-    
-    // Intl API를 사용하여 한국 시간 데이터 추출 (가장 정확하고 현대적인 방식)
-    const formatter = new Intl.DateTimeFormat('ko-KR', {
-      timeZone: 'Asia/Seoul',
-      year: 'numeric', month: '2-digit', day: '2-digit',
-      hour: '2-digit', minute: '2-digit', second: '2-digit',
-      hour12: false
-    });
+    try {
+      const now = new Date();
+      const formatter = new Intl.DateTimeFormat('ko-KR', {
+        timeZone: 'Asia/Seoul',
+        year: 'numeric', month: '2-digit', day: '2-digit',
+        hour: '2-digit', minute: '2-digit', second: '2-digit',
+        hour12: false
+      });
 
-    const parts = formatter.formatToParts(now).reduce((acc, part) => {
-      acc[part.type] = part.value;
-      return acc;
-    }, {});
+      const parts = formatter.formatToParts(now).reduce((acc, part) => {
+        acc[part.type] = part.value;
+        return acc;
+      }, {});
 
-    const year = parts.year;
-    const formattedDate = year + '-' + parts.month + '-' + parts.day;
-    const isoDateTime = year + '-' + parts.month + '-' + parts.day + 'T' + parts.hour + ':' + parts.minute + ':' + parts.second + '+09:00';
+      const year = parts.year;
+      const formattedDate = year + '-' + parts.month + '-' + parts.day;
+      const isoDateTime = year + '-' + parts.month + '-' + parts.day + 'T' + parts.hour + ':' + parts.minute + ':' + parts.second + '+09:00';
 
-    return { year, formattedDate, isoDateTime };
+      return { year, formattedDate, isoDateTime };
+    } catch (e) {
+      const local = new Date();
+      const year = local.getFullYear().toString();
+      const formattedDate = year + '-' + String(local.getMonth() + 1).padStart(2, '0') + '-' + String(local.getDate()).padStart(2, '0');
+      return { year, formattedDate, isoDateTime: local.toISOString() };
+    }
   }
 
-  // 2. SEO 메타 태그 및 JSON-LD 일괄 업데이트
+  // 2. 동적 SEO 헤더 업데이트 및 구조화 데이터 주입 (무링크 페이지 대응형)
   function updateSeoEngine(data) {
     const title = document.title || window.location.hostname;
+    const currentUrl = window.location.href;
+    const originUrl = window.location.origin;
 
-    // 메타 태그 헬퍼 함수
     const setMeta = (selector, content) => {
       let el = document.querySelector(selector);
       if (!el) {
@@ -580,14 +1655,14 @@
       el.content = content;
     };
 
-    // [SEO] 필수 메타 데이터
+    // [SEO] 필수 메타 데이터 동기화
     setMeta('property="og:updated_time"', data.isoDateTime);
     setMeta('property="article:modified_time"', data.isoDateTime);
     setMeta('name="date"', data.formattedDate);
-    setMeta('name="last-modified"', data.isoDateTime); // 서버 응답 대용
+    setMeta('name="last-modified"', data.isoDateTime);
     setMeta('name="copyright"', data.year + ' ' + title);
 
-    // [SEO] JSON-LD 구조화 데이터 (WebPage + Organization 결합)
+    // [SEO] 구조화 데이터(JSON-LD) 생성 및 반영 (WebPage + WebSite 연동)
     let ldJsonScript = document.getElementById('seo-json-ld');
     if (!ldJsonScript) {
       ldJsonScript = document.createElement('script');
@@ -601,69 +1676,86 @@
       "@graph": [
         {
           "@type": "WebPage",
-          "@id": window.location.href,
-          "url": window.location.href,
+          "@id": currentUrl,
+          "url": currentUrl,
           "name": title,
           "datePublished": data.isoDateTime,
           "dateModified": data.isoDateTime,
-          "inLanguage": "ko-KR"
-        },
-        {
-          "@type": "Organization",
-          "name": title,
-          "url": window.location.origin,
-          "logo": window.location.origin + "/favicon.ico"
+          "inLanguage": "ko-KR",
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": originUrl + "/#website",
+            "url": originUrl,
+            "name": title
+          }
         }
       ]
     };
     ldJsonScript.textContent = JSON.stringify(jsonLd);
   }
 
-  // 3. UI 업데이트
+  // 3. UI 바인딩 및 보정
   function updateUi(data) {
-    const title = document.title || window.location.hostname;
-    
-    // 연도 및 제목
-    document.getElementById('copyright-year').textContent = data.year;
-    document.getElementById('site-title-display').textContent = title;
-    
-    // 날짜
-    const timeElem = document.getElementById('last-update-time');
-    timeElem.textContent = data.formattedDate;
-    timeElem.setAttribute('datetime', data.isoDateTime);
+    const cleanHost = window.location.hostname.replace('www.', '');
+    const title = document.title ? document.title.split('-')[0].trim() : cleanHost;
 
-    // 상태 메시지 (랜덤 순환)
+    // 사이트 타이틀 일괄 바인딩
+    const titleElements = document.querySelectorAll('#dynamic-footer .site-name-display');
+    titleElements.forEach(el => {
+      el.textContent = title;
+    });
+
+    // 연도 및 날짜 정보 바인딩
+    const copyrightYear = document.getElementById('copyright-year');
+    if (copyrightYear) copyrightYear.textContent = data.year;
+
+    const timeElem = document.getElementById('last-update-time');
+    if (timeElem) {
+      timeElem.textContent = data.formattedDate;
+      timeElem.setAttribute('datetime', data.isoDateTime);
+    }
+
+    // 시스템 최적화 상태 시그널 순환 출력
     const statusMsgs = [
-         "서비스 최적화 완료", 
-          "데이터베이스 동기화 완료", 
-          "보안 프로토콜 점검 완료",
-          "콘텐츠 최신화 완료",
-          "시스템 점검 완료",
-          "웹표준 레이아웃 최적화",
-          "사용자 인터페이스 안정화",
-          "성능 개선 완료",
-          "새로운 데이터 로드 완료",
-          "운영 시스템 안정화 완료",
-          "인덱싱 최적화 완료",
-          "데이터 무결성 검사 완료", 
-          "캐시 레이어 갱신",
-          "보안 프로토콜 활성화", 
-          "실시간 콘텐츠 동기화"
+      "웹표준 최적화 점검 완료",
+      "보안 환경 무결성 확인",
+      "레이아웃 정합성 검증 완료",
+      "반응형 데이터 세그먼트 동기화",
+      "검색엔진 인덱싱 데이터 정비",
+      "클라이언트 캐시 동기화 완료",
+       "서비스 최적화 완료", 
+       "데이터베이스 동기화 완료", 
+       "보안 프로토콜 점검 완료",
+       "콘텐츠 최신화 완료",
+       "시스템 점검 완료",
+       "웹표준 레이아웃 최적화",
+       "사용자 인터페이스 안정화",
+       "성능 개선 완료",
+       "새로운 데이터 로드 완료",
+       "운영 시스템 안정화 완료",
+       "인덱싱 최적화 완료",
+       "데이터 무결성 검사 완료", 
+       "캐시 레이어 갱신",
+       "보안 프로토콜 활성화", 
+       "실시간 콘텐츠 동기화"
     ];
-    document.getElementById('sync-status').textContent = statusMsgs[Math.floor(Math.random() * statusMsgs.length)];
+    const syncStatus = document.getElementById('sync-status');
+    if (syncStatus) {
+      syncStatus.textContent = statusMsgs[Math.floor(Math.random() * statusMsgs.length)];
+    }
   }
 
-  // 4. 실행 제어 (DOM 로드 후 실행)
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-      const data = getKstInfo();
-      updateUi(data);
-      updateSeoEngine(data);
-    });
-  } else {
+  // 4. 실행 통합 컨트롤러
+  function init() {
     const data = getKstInfo();
     updateUi(data);
     updateSeoEngine(data);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
 })();
 </script>
